@@ -7,41 +7,47 @@ import {
 } from '@ant-design/icons';
 import { useState } from 'react';
 import { Input, Modal, Drawer, Badge } from 'antd';
-import { ReactComponent as SVG1 } from '../../public/icon/SIM-冷冻干燥机.svg';
-import { ReactComponent as SVG2 } from '../../public/icon/SIM-振荡器.svg';
-import { ReactComponent as SVG3 } from '../../public/icon/SIM-数控超声波清洗器.svg';
-import { ReactComponent as SVG4 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG5 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG6 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG7 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG8 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG9 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG10 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG11 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG12 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG13 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG14 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG15 } from '../../public/icon/SIM-涡旋仪.svg';
-import { ReactComponent as SVG16 } from '../../public/icon/SIM-涡旋仪.svg';
+import { ReactComponent as SVG1 } from '../../public/icon/COM-叶.svg';
+import { ReactComponent as SVG2 } from '../../public/icon/COM-四级杆.svg';
+import { ReactComponent as SVG3 } from '../../public/icon/COM-离子阱.svg';
+import { ReactComponent as SVG4 } from '../../public/icon/COM-胃.svg';
+import { ReactComponent as SVG5 } from '../../public/icon/COM-静电场轨道阱（Orbitrap）.svg';
+import { ReactComponent as SVG6 } from '../../public/icon/COM-飞行时间.svg';
+import { ReactComponent as SVG7 } from '../../public/icon/SIM- 静电场轨道阱（Orbitrap）.svg';
+import { ReactComponent as SVG8 } from '../../public/icon/SIM-叶.svg';
+import { ReactComponent as SVG9 } from '../../public/icon/SIM-四级杆.svg';
+import { ReactComponent as SVG10 } from '../../public/icon/SIM-离子阱.svg';
+import { ReactComponent as SVG11 } from '../../public/icon/SIM-胃.svg';
+import { ReactComponent as SVG12 } from '../../public/icon/SIM-飞行时间.svg';
+import { ReactComponent as SVG13 } from '../../public/icon/SIM-离心机.svg';
+import { ReactComponent as SVG14 } from '../../public/icon/SIM-环境.svg';
 const { Search } = Input;
 
 const iconList = [
-  { id: '1', component: SVG1, path: './icon/SIM-冷冻干燥机.svg', name: '冷冻干燥机' },
-  { id: '2', component: SVG2, path: './icon/SIM-振荡器.svg', name: '振荡器' },
-  { id: '3', component: SVG3, path: './icon/SIM-数控超声波清洗器.svg', name: '数控超声波清洗器' },
-  { id: '4', component: SVG4, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '5', component: SVG5, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '6', component: SVG6, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '7', component: SVG7, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '8', component: SVG8, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '9', component: SVG9, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '10', component: SVG10, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '11', component: SVG11, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '12', component: SVG12, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '13', component: SVG13, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '14', component: SVG14, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '15', component: SVG15, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
-  { id: '16', component: SVG16, path: './icon/SIM-涡旋仪.svg', name: '涡旋仪' },
+  { id: '1', component: SVG1, path: './icon/COM-叶.svg', name: 'COM-叶' },
+  { id: '2', component: SVG2, path: './icon/COM-四级杆.svg', name: 'COM-四级杆' },
+  { id: '3', component: SVG3, path: './icon/COM-离子阱.svg', name: 'COM-离子阱' },
+  { id: '4', component: SVG4, path: './icon/COM-胃.svg', name: 'COM-胃' },
+  {
+    id: '5',
+    component: SVG5,
+    path: './icon/COM-静电场轨道阱（Orbitrap）.svg',
+    name: 'COM-静电场轨道阱（Orbitrap）',
+  },
+  { id: '6', component: SVG6, path: './icon/COM-飞行时间.svg', name: 'COM-飞行时间' },
+  {
+    id: '7',
+    component: SVG7,
+    path: './icon/SIM- 静电场轨道阱（Orbitrap）',
+    name: 'SIM- 静电场轨道阱（Orbitrap）',
+  },
+  { id: '8', component: SVG8, path: './icon/SIM-叶.svg', name: 'SIM-叶' },
+  { id: '9', component: SVG9, path: './icon/SIM-四级杆.svg', name: 'SIM-四级杆' },
+  { id: '10', component: SVG10, path: './icon/SIM-离子阱.svg', name: 'SIM-离子阱' },
+  { id: '11', component: SVG11, path: './icon/SIM-胃.svg', name: 'SIM-胃' },
+  { id: '12', component: SVG12, path: './icon/SIM-飞行时间.svg', name: 'SIM-飞行时间' },
+  { id: '13', component: SVG13, path: './icon/SIM-离心机.svg', name: 'SIM-离心机' },
+  { id: '14', component: SVG14, path: './icon/SIM-环境.svg', name: 'SIM-环境' },
 ];
 
 const Home = () => {
@@ -63,9 +69,16 @@ const Home = () => {
 
         // 修改颜色
         const pathsToChangeColor = doc.querySelectorAll('path');
-        pathsToChangeColor.forEach((path) => {
-          path.setAttribute('fill', color);
-        });
+
+        for (let i = 0; i < pathsToChangeColor.length; i++) {
+          if (pathsToChangeColor[i].getAttribute('noFill') == 'true') {
+            continue;
+          }
+          // pathsToChangeColor[i].style.fill = color;
+          pathsToChangeColor[i].setAttribute('fill', color);
+          // pathsToChangeColor[i].style.stroke = color;
+          // pathsToChangeColor[i].setAttribute('stroke', color);
+        }
 
         // 创建 SVG 文件下载链接
         const serializer = new XMLSerializer();
@@ -81,8 +94,17 @@ const Home = () => {
         URL.revokeObjectURL(url);
       });
   };
-  const [color, setColor] = useState('');
+  const [color, setColor] = useState('#333333');
   const set = (color: string) => {
+    const box = document.getElementById(selectedId);
+    const paths = box.getElementsByTagName('path');
+    for (let i = 0; i < paths.length; i++) {
+      if (paths[i].getAttribute('noFill') == 'true') {
+        continue;
+      }
+
+      paths[i].style.fill = color;
+    }
     setColor(color);
     console.log(color);
   };
@@ -170,8 +192,17 @@ const Home = () => {
           const IconComponent = icon.component;
           return (
             <div style={{ position: 'relative' }}>
-              <IconComponent key={icon.id} className={styles.svg} id={icon.id} />
-              <p style={{ width: '250px', textAlign: 'center' }}>{icon.name}</p>
+              <IconComponent key={icon.id} className={styles.svg} />
+              <p
+                style={{
+                  textAlign: 'center',
+                  width: '150px',
+                  whiteSpace: 'normal',
+                  marginLeft: '45px',
+                }}
+              >
+                {icon.name}
+              </p>
               <div className={styles.box}>
                 <div className={styles.iconbox} onClick={() => setShopID(icon.id)}>
                   {<ShoppingCartOutlined className={styles.icon} />}
@@ -204,8 +235,16 @@ const Home = () => {
           if (icon.id === selectedId) {
             return (
               <>
-                <IconComponent key={icon.id} className={styles.bigsvg} style={{ fill: color }} />
-                <p style={{ position: 'relative', top: '-120px', left: '200px' }}>
+                <IconComponent id={icon.id} key={icon.id} className={styles.bigsvg} />
+                <p
+                  style={{
+                    position: 'relative',
+                    top: '-120px',
+                    left: '200px',
+                    width: '200px',
+                    whiteSpace: 'normal',
+                  }}
+                >
                   名称：{icon.name}
                 </p>
               </>
@@ -223,6 +262,7 @@ const Home = () => {
           <li onClick={() => set('#f6c957')}></li>
           <li onClick={() => set('#ffb77f')}></li>
           <li onClick={() => set('#fbe8d5')}></li>
+          <li onClick={() => set('#333333')}></li>
         </ul>
       </Modal>
       <Drawer
