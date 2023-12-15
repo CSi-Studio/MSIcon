@@ -102,8 +102,9 @@ const Home = () => {
       if (paths[i].getAttribute('noFill') == 'true') {
         continue;
       }
+      paths[i].setAttribute('fill', color);
 
-      paths[i].style.fill = color;
+      // paths[i].style.fill = color;
     }
     setColor(color);
     console.log(color);
@@ -240,19 +241,31 @@ const Home = () => {
                   style={{
                     position: 'relative',
                     top: '-120px',
-                    left: '200px',
+                    left: '240px',
                     width: '200px',
                     whiteSpace: 'normal',
                   }}
                 >
                   名称：{icon.name}
                 </p>
+                {/* <ColorPicker /> */}
               </>
             );
           }
           return null;
         })}
         <ul className={styles.ul}>
+          <li onClick={() => set('#ea8379')}></li>
+          <li onClick={() => set('#7daee0')}></li>
+          <li onClick={() => set('#b395bd')}></li>
+          <li onClick={() => set('#299d8f')}></li>
+          <li onClick={() => set('#e9c46a')}></li>
+          <li onClick={() => set('#d87659')}></li>
+          <li onClick={() => set('#55b7e6')}></li>
+          <li onClick={() => set('#193e8f')}></li>
+          <li onClick={() => set('#e53528')}></li>
+          <li onClick={() => set('#f09739')}></li>
+
           <li onClick={() => set('#43978f')}></li>
           <li onClick={() => set('#9ec4be')}></li>
           <li onClick={() => set('#ABD0F1')}></li>
@@ -262,6 +275,7 @@ const Home = () => {
           <li onClick={() => set('#f6c957')}></li>
           <li onClick={() => set('#ffb77f')}></li>
           <li onClick={() => set('#fbe8d5')}></li>
+          <li onClick={() => set('rgba(0,0,0,0)')}></li>
           <li onClick={() => set('#333333')}></li>
         </ul>
       </Modal>
