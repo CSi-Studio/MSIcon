@@ -1,55 +1,64 @@
-import styles from './Home.less';
 import {
-  ShoppingCartOutlined,
-  DownloadOutlined,
   ClearOutlined,
   DeleteOutlined,
+  DownloadOutlined,
+  ShoppingCartOutlined,
 } from '@ant-design/icons';
+import type { RadioChangeEvent } from 'antd';
+import { Badge, Button, ColorPicker, Drawer, Input, Modal, Radio } from 'antd';
 import { useState } from 'react';
-import { Input, Modal, Drawer, Badge ,ColorPicker} from 'antd';
-import type { ColorPickerProps } from 'antd/es/color-picker';
-import { ReactComponent as SVG1 } from '../../public/icon/COM-叶.svg';
-import { ReactComponent as SVG2 } from '../../public/icon/COM-四级杆.svg';
-import { ReactComponent as SVG3 } from '../../public/icon/COM-离子阱.svg';
-import { ReactComponent as SVG4 } from '../../public/icon/COM-胃.svg';
-import { ReactComponent as SVG5 } from '../../public/icon/COM-静电场轨道阱（Orbitrap）.svg';
-import { ReactComponent as SVG6 } from '../../public/icon/COM-飞行时间.svg';
-import { ReactComponent as SVG7 } from '../../public/icon/SIM- 静电场轨道阱（Orbitrap）.svg';
-import { ReactComponent as SVG8 } from '../../public/icon/SIM-叶.svg';
-import { ReactComponent as SVG9 } from '../../public/icon/SIM-四级杆.svg';
-import { ReactComponent as SVG10 } from '../../public/icon/SIM-离子阱.svg';
-import { ReactComponent as SVG11 } from '../../public/icon/SIM-胃.svg';
-import { ReactComponent as SVG12 } from '../../public/icon/SIM-飞行时间.svg';
-import { ReactComponent as SVG13 } from '../../public/icon/SIM-离心机.svg';
-import { ReactComponent as SVG14 } from '../../public/icon/SIM-环境.svg';
-import Icon from '@ant-design/icons/lib/components/Icon';
+import { ReactComponent as SVG1 } from '../../public/icon/SIM-叶.svg';
+import { ReactComponent as SVG2 } from '../../public/icon/SIM-胃.svg';
+import { ReactComponent as SVG3 } from '../../public/icon/SIM-血液.svg';
+import { ReactComponent as SVG4 } from '../../public/icon/飞行时间-1.svg';
+import { ReactComponent as SVG5 } from '../../public/icon/飞行时间-2.svg';
+import { ReactComponent as Right } from '../../public/icon/向右.svg';
+import styles from './Home.less';
 const { Search } = Input;
 
 const iconList = [
-  { id: '1', component: SVG1, path: './icon/COM-叶.svg', name: 'COM-叶' },
-  { id: '2', component: SVG2, path: './icon/COM-四级杆.svg', name: 'COM-四级杆' },
-  { id: '3', component: SVG3, path: './icon/COM-离子阱.svg', name: 'COM-离子阱' },
-  { id: '4', component: SVG4, path: './icon/COM-胃.svg', name: 'COM-胃' },
+  {
+    id: '1',
+    component: SVG1,
+    path: './icon/SIM-叶.svg',
+    name: 'SIM-叶',
+    recommend: '#629C15',
+    default: 'rgba(0,0,0,0)',
+  },
+  {
+    id: '2',
+    component: SVG2,
+    path: './icon/SIM-胃.svg',
+    name: 'SIM-胃',
+    recommend: '#CA7A61',
+    default: 'rgba(0,0,0,0)',
+  },
+  {
+    id: '3',
+    component: SVG3,
+    path: './icon/SIM-血液.svg',
+    name: 'SIM-血液',
+    recommend: '#ca3a26',
+    default: '#666666',
+  },
+  {
+    id: '4',
+    component: SVG4,
+    path: './icon/飞行时间-1.svg',
+    name: '飞行时间-1',
+    recommend: '#666666',
+    default: '#666666',
+    association: '飞行时间-2',
+  },
   {
     id: '5',
     component: SVG5,
-    path: './icon/COM-静电场轨道阱（Orbitrap）.svg',
-    name: 'COM-静电场轨道阱（Orbitrap）',
+    path: './icon/飞行时间-2.svg',
+    name: '飞行时间-2',
+    recommend: '#666666',
+    default: '#666666',
+    association: '飞行时间-1',
   },
-  { id: '6', component: SVG6, path: './icon/COM-飞行时间.svg', name: 'COM-飞行时间' },
-  {
-    id: '7',
-    component: SVG7,
-    path: './icon/SIM- 静电场轨道阱（Orbitrap）',
-    name: 'SIM- 静电场轨道阱（Orbitrap）',
-  },
-  { id: '8', component: SVG8, path: './icon/SIM-叶.svg', name: 'SIM-叶' },
-  { id: '9', component: SVG9, path: './icon/SIM-四级杆.svg', name: 'SIM-四级杆' },
-  { id: '10', component: SVG10, path: './icon/SIM-离子阱.svg', name: 'SIM-离子阱' },
-  { id: '11', component: SVG11, path: './icon/SIM-胃.svg', name: 'SIM-胃' },
-  { id: '12', component: SVG12, path: './icon/SIM-飞行时间.svg', name: 'SIM-飞行时间' },
-  { id: '13', component: SVG13, path: './icon/SIM-离心机.svg', name: 'SIM-离心机' },
-  { id: '14', component: SVG14, path: './icon/SIM-环境.svg', name: 'SIM-环境' },
 ];
 
 const Home = () => {
@@ -68,20 +77,24 @@ const Home = () => {
         // 解析 SVG 文件
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgData, 'image/svg+xml');
-
-        // 修改颜色
         const pathsToChangeColor = doc.querySelectorAll('path');
-
-        for (let i = 0; i < pathsToChangeColor.length; i++) {
-          if (pathsToChangeColor[i].getAttribute('noFill') == 'true') {
-            continue;
+        // 修改颜色
+        if (color != '') {
+          for (let i = 0; i < pathsToChangeColor.length; i++) {
+            const classNames = pathsToChangeColor[i].getAttribute('class');
+            if (classNames && classNames.includes('xian')) {
+              pathsToChangeColor[i].setAttribute('fill', color);
+            }
           }
-          // pathsToChangeColor[i].style.fill = color;
-          pathsToChangeColor[i].setAttribute('fill', color);
-          // pathsToChangeColor[i].style.stroke = color;
-          // pathsToChangeColor[i].setAttribute('stroke', color);
         }
-
+        if (color1 != '') {
+          for (let i = 0; i < pathsToChangeColor.length; i++) {
+            const classNames = pathsToChangeColor[i].getAttribute('class');
+            if (classNames && classNames.includes('mian')) {
+              pathsToChangeColor[i].setAttribute('fill', color1);
+            }
+          }
+        }
         // 创建 SVG 文件下载链接
         const serializer = new XMLSerializer();
         const modifiedSvgData = serializer.serializeToString(doc);
@@ -96,36 +109,52 @@ const Home = () => {
         URL.revokeObjectURL(url);
       });
   };
-  const [color, setColor] = useState('#333333');
-  const set = (color: string) => {
-    const box = document.getElementById(selectedId);
-    const paths = box.getElementsByTagName('path');
-    for (let i = 0; i < paths.length; i++) {
-      if (paths[i].getAttribute('noFill') == 'true') {
-        continue;
-      }
-      paths[i].setAttribute('fill', color);
-    }
-    setColor(color);
-    console.log(color);
-  };
   //下载弹窗
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedId, setSelectedId] = useState('');
   const showModal = (id: string) => {
     setIsModalOpen(true);
     setSelectedId(id);
-    // console.log(selectedId);
+    defaultColor(id);
   };
   const handleOk = () => {
     handleDownload(selectedId);
     setIsModalOpen(false);
-    setColor('');
+    setValue(1);
   };
   const handleCancel = () => {
     setIsModalOpen(false);
-    setColor('');
+    setValue(1);
   };
+  const [color, setColor] = useState('');
+  const [color1, setColor1] = useState('');
+  const set = (color: string) => {
+    const box = document.getElementById(selectedId);
+    if (!box) {
+      return;
+    }
+    const paths = box.getElementsByTagName('path');
+    if (value === 1) {
+      setColor(color);
+      for (let i = 0; i < paths.length; i++) {
+        const classNames = paths[i].getAttribute('class');
+        if (classNames && classNames.includes('mian')) {
+          continue;
+        }
+        paths[i].setAttribute('fill', color);
+      }
+    } else if (value === 2) {
+      setColor1(color);
+      for (let i = 0; i < paths.length; i++) {
+        const classNames = paths[i].getAttribute('class');
+        if (classNames && classNames.includes('xian')) {
+          continue;
+        }
+        paths[i].setAttribute('fill', color);
+      }
+    }
+  };
+
   //购物车抽屉
   const [open, setOpen] = useState(false);
   const [shop, setShop] = useState<string[]>([]);
@@ -155,6 +184,7 @@ const Home = () => {
   };
   //搜索
   const [List, setList] = useState(iconList);
+
   const onChange = (event: any) => {
     const value = event.target.value; // 获取输入框的值
     // console.log(value);
@@ -165,6 +195,128 @@ const Home = () => {
       setList(iconList);
     }
   };
+
+  //单选框
+  const [value, setValue] = useState(1);
+  const onChange1 = (e: RadioChangeEvent) => {
+    setValue(e.target.value);
+  };
+  //默认颜色
+  const defaultColor = (id: string) => {
+    setColor('#333333');
+    const icon = iconList.find((icon) => icon.id === id);
+    if (icon) {
+      setColor1(icon.default);
+      const svgElement = document.getElementById(id);
+      if (svgElement) {
+        const paths = svgElement.querySelectorAll('path');
+        for (let i = 0; i < paths.length; i++) {
+          const classNames = paths[i].getAttribute('class');
+          if (classNames && classNames.includes('xian')) {
+            paths[i].setAttribute('fill', '#333333');
+          } else {
+            paths[i].setAttribute('fill', icon.default);
+          }
+        }
+      }
+    }
+  };
+  //推荐颜色
+  const recommendColor = (id: string) => {
+    setColor('#333333');
+    const icon = iconList.find((icon) => icon.id === id);
+    if (icon) {
+      setColor1(icon.recommend);
+      const svgElement = document.getElementById(id);
+      if (svgElement) {
+        const paths = svgElement.querySelectorAll('path');
+        for (let i = 0; i < paths.length; i++) {
+          const classNames = paths[i].getAttribute('class');
+          if (classNames && classNames.includes('xian')) {
+            paths[i].setAttribute('fill', '#333333');
+          } else {
+            paths[i].setAttribute('fill', icon.recommend);
+          }
+        }
+      }
+    }
+  };
+  //弹出框组件
+  const renderIcon = (iconList: any, selectedId: any) => {
+    return iconList.map((icon: any) => {
+      const IconComponent = icon.component;
+      if (icon.id === selectedId) {
+        return (
+          <>
+            <IconComponent
+              viewBox="0 0 24 24"
+              id={icon.id}
+              key={icon.id}
+              className={styles.bigsvg}
+            />
+            {icon.association && (
+              <p
+                style={{
+                  position: 'relative',
+                  top: '-160px',
+                  left: '240px',
+                  color:'#1677FF',
+                  cursor: 'pointer'
+                }}
+                onClick={() => association(icon.association)}
+              >
+                关联图标: {icon.association} <Right style={{ width:'16px',height:'16px',position: 'relative',top: '3px'}} />
+              </p>
+            )}
+            <p
+              style={{
+                position: 'relative',
+                top: '-140px',
+                left: '240px',
+                width: '200px',
+                whiteSpace: 'normal',
+              }}
+            >
+              名称：{icon.name}
+            </p>
+            <Button
+              type="primary"
+              style={{ position: 'relative', top: '-100px', left: '230px' }}
+              onClick={() => defaultColor(icon.id)}
+            >
+              默认图标
+            </Button>
+            <Button
+              type="primary"
+              style={{ position: 'relative', top: '-100px', left: '250px' }}
+              onClick={() => recommendColor(icon.id)}
+            >
+              推荐配色
+            </Button>
+            <Radio.Group
+              onChange={onChange1}
+              value={value}
+              style={{ position: 'relative', top: '-60px', left: '40px' }}
+            >
+              <Radio value={1}>改变线条颜色</Radio>
+              <Radio value={2}>改变填充颜色</Radio>
+            </Radio.Group>
+          </>
+        );
+      }
+      return null;
+    });
+  };
+  let renderedIcons = renderIcon(iconList, selectedId);
+    //关联按钮
+    const association=(association:string)=>{
+      // console.log(association);
+      const associationIcon = iconList.find((icon) => icon.name === association);
+      // console.log(associationIcon.id);
+      if(associationIcon){
+      setSelectedId(associationIcon.id);
+      }
+    }
   return (
     <>
       <div className={styles.head}>
@@ -193,7 +345,7 @@ const Home = () => {
           const IconComponent = icon.component;
           return (
             <div style={{ position: 'relative' }}>
-                <IconComponent viewBox="0 0 24 24"  key={icon.id} className={styles.svg} />
+              <IconComponent viewBox="0 0 24 24" key={icon.id} className={styles.svg} />
               <p
                 style={{
                   textAlign: 'center',
@@ -231,28 +383,7 @@ const Home = () => {
           marginTop: '-300px',
         }}
       >
-        {iconList.map((icon) => {
-          const IconComponent = icon.component;
-          if (icon.id === selectedId) {
-            return (
-              <>
-                <IconComponent viewBox="0 0 24 24"  id={icon.id} key={icon.id} className={styles.bigsvg} />
-                <p
-                  style={{
-                    position: 'relative',
-                    top: '-120px',
-                    left: '240px',
-                    width: '200px',
-                    whiteSpace: 'normal',
-                  }}
-                >
-                  名称：{icon.name}
-                </p>
-              </>
-            );
-          }
-          return null;
-        })}
+         {renderedIcons}
         <ul className={styles.ul}>
           <li onClick={() => set('#ea8379')}></li>
           <li onClick={() => set('#7daee0')}></li>
@@ -277,11 +408,11 @@ const Home = () => {
           <li onClick={() => set('rgba(0,0,0,0)')}></li>
           <li onClick={() => set('#333333')}></li>
           <ColorPicker
-        size="large"
-        onChangeComplete={(color) => {
-            set(color.toHexString());
-        }}
-      />
+            size="large"
+            onChangeComplete={(color) => {
+              set(color.toHexString());
+            }}
+          />
         </ul>
       </Modal>
       <Drawer
@@ -304,7 +435,11 @@ const Home = () => {
                 const IconComponent = icon.component;
                 return (
                   <div style={{ position: 'relative' }}>
-                    <IconComponent viewBox="0 0 24 24" key={icon.id} style={{ width: '50px', height: '50px' }} />
+                    <IconComponent
+                      viewBox="0 0 24 24"
+                      key={icon.id}
+                      style={{ width: '50px', height: '50px' }}
+                    />
                     <div className={styles.shopDelete} onClick={() => deleteFromShop(id)}>
                       <DeleteOutlined style={{ fontSize: '30px', color: 'white' }} />
                     </div>
