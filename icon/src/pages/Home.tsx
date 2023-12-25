@@ -4,62 +4,13 @@ import {
   DownloadOutlined,
   ShoppingCartOutlined,
 } from '@ant-design/icons';
-import type { RadioChangeEvent } from 'antd';
-import { Badge, Button, ColorPicker, Drawer, Input, Modal, Radio } from 'antd';
+import type { MenuProps, RadioChangeEvent } from 'antd';
+import { Badge, Button, ColorPicker, Drawer, Input, Menu, Modal, Radio } from 'antd';
 import { useState } from 'react';
-import { ReactComponent as SVG1 } from '../../public/icon/SIM-叶.svg';
-import { ReactComponent as SVG2 } from '../../public/icon/SIM-胃.svg';
-import { ReactComponent as SVG3 } from '../../public/icon/SIM-血液.svg';
-import { ReactComponent as SVG4 } from '../../public/icon/飞行时间-1.svg';
-import { ReactComponent as SVG5 } from '../../public/icon/飞行时间-2.svg';
 import { ReactComponent as Right } from '../../public/icon/向右.svg';
 import styles from './Home.less';
+import iconList from './IconDown';
 const { Search } = Input;
-
-const iconList = [
-  {
-    id: '1',
-    component: SVG1,
-    path: './icon/SIM-叶.svg',
-    name: 'SIM-叶',
-    recommend: '#629C15',
-    default: 'rgba(0,0,0,0)',
-  },
-  {
-    id: '2',
-    component: SVG2,
-    path: './icon/SIM-胃.svg',
-    name: 'SIM-胃',
-    recommend: '#CA7A61',
-    default: 'rgba(0,0,0,0)',
-  },
-  {
-    id: '3',
-    component: SVG3,
-    path: './icon/SIM-血液.svg',
-    name: 'SIM-血液',
-    recommend: '#ca3a26',
-    default: '#666666',
-  },
-  {
-    id: '4',
-    component: SVG4,
-    path: './icon/飞行时间-1.svg',
-    name: '飞行时间-1',
-    recommend: '#666666',
-    default: '#666666',
-    association: '飞行时间-2',
-  },
-  {
-    id: '5',
-    component: SVG5,
-    path: './icon/飞行时间-2.svg',
-    name: '飞行时间-2',
-    recommend: '#666666',
-    default: '#666666',
-    association: '飞行时间-1',
-  },
-];
 
 const Home = () => {
   //下载 SVG 文件
@@ -112,19 +63,27 @@ const Home = () => {
   //下载弹窗
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedId, setSelectedId] = useState('');
+  const [reDefault, setReDefault] = useState<any>();
   const showModal = (id: string) => {
     setIsModalOpen(true);
     setSelectedId(id);
-    defaultColor(id);
   };
   const handleOk = () => {
     handleDownload(selectedId);
-    setIsModalOpen(false);
     setValue(1);
+    setReDefault(<></>)
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setReDefault(undefined);
+    }, 0);
   };
   const handleCancel = () => {
-    setIsModalOpen(false);
     setValue(1);
+    setReDefault(<></>)
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setReDefault(undefined);
+    }, 0);
   };
   const [color, setColor] = useState('');
   const [color1, setColor1] = useState('');
@@ -141,7 +100,9 @@ const Home = () => {
         if (classNames && classNames.includes('mian')) {
           continue;
         }
-        paths[i].setAttribute('fill', color);
+        if (classNames && classNames.includes('xian')) {
+          paths[i].setAttribute('fill', color);
+        }
       }
     } else if (value === 2) {
       setColor1(color);
@@ -150,7 +111,9 @@ const Home = () => {
         if (classNames && classNames.includes('xian')) {
           continue;
         }
-        paths[i].setAttribute('fill', color);
+        if (classNames && classNames.includes('mian')) {
+          paths[i].setAttribute('fill', color);
+        }
       }
     }
   };
@@ -201,46 +164,7 @@ const Home = () => {
   const onChange1 = (e: RadioChangeEvent) => {
     setValue(e.target.value);
   };
-  //默认颜色
-  const defaultColor = (id: string) => {
-    setColor('#333333');
-    const icon = iconList.find((icon) => icon.id === id);
-    if (icon) {
-      setColor1(icon.default);
-      const svgElement = document.getElementById(id);
-      if (svgElement) {
-        const paths = svgElement.querySelectorAll('path');
-        for (let i = 0; i < paths.length; i++) {
-          const classNames = paths[i].getAttribute('class');
-          if (classNames && classNames.includes('xian')) {
-            paths[i].setAttribute('fill', '#333333');
-          } else {
-            paths[i].setAttribute('fill', icon.default);
-          }
-        }
-      }
-    }
-  };
-  //推荐颜色
-  const recommendColor = (id: string) => {
-    setColor('#333333');
-    const icon = iconList.find((icon) => icon.id === id);
-    if (icon) {
-      setColor1(icon.recommend);
-      const svgElement = document.getElementById(id);
-      if (svgElement) {
-        const paths = svgElement.querySelectorAll('path');
-        for (let i = 0; i < paths.length; i++) {
-          const classNames = paths[i].getAttribute('class');
-          if (classNames && classNames.includes('xian')) {
-            paths[i].setAttribute('fill', '#333333');
-          } else {
-            paths[i].setAttribute('fill', icon.recommend);
-          }
-        }
-      }
-    }
-  };
+
   //弹出框组件
   const renderIcon = (iconList: any, selectedId: any) => {
     return iconList.map((icon: any) => {
@@ -260,12 +184,15 @@ const Home = () => {
                   position: 'relative',
                   top: '-160px',
                   left: '240px',
-                  color:'#1677FF',
-                  cursor: 'pointer'
+                  color: '#1677FF',
+                  cursor: 'pointer',
                 }}
                 onClick={() => association(icon.association)}
               >
-                关联图标: {icon.association} <Right style={{ width:'16px',height:'16px',position: 'relative',top: '3px'}} />
+                关联图标: {icon.association}{' '}
+                <Right
+                  style={{ width: '16px', height: '16px', position: 'relative', top: '3px' }}
+                />
               </p>
             )}
             <p
@@ -282,7 +209,7 @@ const Home = () => {
             <Button
               type="primary"
               style={{ position: 'relative', top: '-100px', left: '230px' }}
-              onClick={() => defaultColor(icon.id)}
+              onClick={()=>defaultColor(icon.id)}
             >
               默认图标
             </Button>
@@ -301,90 +228,7 @@ const Home = () => {
               <Radio value={1}>改变线条颜色</Radio>
               <Radio value={2}>改变填充颜色</Radio>
             </Radio.Group>
-          </>
-        );
-      }
-      return null;
-    });
-  };
-  let renderedIcons = renderIcon(iconList, selectedId);
-    //关联按钮
-    const association=(association:string)=>{
-      // console.log(association);
-      const associationIcon = iconList.find((icon) => icon.name === association);
-      // console.log(associationIcon.id);
-      if(associationIcon){
-      setSelectedId(associationIcon.id);
-      }
-    }
-  return (
-    <>
-      <div className={styles.head}>
-        MSICON-FONT{' '}
-        <Badge count={shop.length}>
-          <ShoppingCartOutlined
-            style={{ color: 'white', marginLeft: '600px', fontSize: '40px' }}
-            onClick={showDrawer}
-          />
-        </Badge>
-      </div>
-      <div className={styles.top}>
-        <h2>图标列表</h2>
-        <Search
-          placeholder="搜索"
-          onChange={onChange}
-          style={{
-            width: 800,
-            height: 100,
-            marginLeft: 600,
-          }}
-        ></Search>
-      </div>
-      <div className={styles.main}>
-        {List.map((icon) => {
-          const IconComponent = icon.component;
-          return (
-            <div style={{ position: 'relative' }}>
-              <IconComponent viewBox="0 0 24 24" key={icon.id} className={styles.svg} />
-              <p
-                style={{
-                  textAlign: 'center',
-                  width: '150px',
-                  whiteSpace: 'normal',
-                  marginLeft: '45px',
-                }}
-              >
-                {icon.name}
-              </p>
-              <div className={styles.box}>
-                <div className={styles.iconbox} onClick={() => setShopID(icon.id)}>
-                  {<ShoppingCartOutlined className={styles.icon} />}
-                </div>
-                <div className={styles.iconbox} onClick={() => showModal(icon.id)}>
-                  {<DownloadOutlined className={styles.icon} />}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      <Modal
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        okText="下载"
-        cancelText="取消"
-        width="600"
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          marginLeft: '-300px',
-          marginTop: '-300px',
-        }}
-      >
-         {renderedIcons}
-        <ul className={styles.ul}>
+            <ul className={styles.ul}>
           <li onClick={() => set('#ea8379')}></li>
           <li onClick={() => set('#7daee0')}></li>
           <li onClick={() => set('#b395bd')}></li>
@@ -414,6 +258,234 @@ const Home = () => {
             }}
           />
         </ul>
+          </>
+        );
+      }
+      return null;
+    });
+  };
+  let renderedIcons = renderIcon(iconList, selectedId);
+  //推荐颜色
+  const recommendColor = (id: string) => {
+    setColor('');
+    setColor1('');
+    const icon = iconList.find((icon) => icon.id === id);
+    if (icon?.recommend) {
+    if (icon) {
+      setColor1(icon.recommend);
+      const svgElement = document.getElementById(id);
+      if (svgElement) {
+        const paths = svgElement.querySelectorAll('path');
+        for (let i = 0; i < paths.length; i++) {
+          const classNames = paths[i].getAttribute('class');
+          if (classNames && classNames.includes('xian')) {
+            paths[i].setAttribute('fill', '#333333');
+          } else if (classNames && classNames.includes('mian')) {
+            paths[i].setAttribute('fill', icon.recommend);
+          }
+        }
+      }
+    }
+  }else{
+    setReDefault(<></>);
+      setTimeout(() => {
+        setReDefault(undefined);
+      }, 0);
+  }
+  };
+  //默认颜色
+  const defaultColor = (id: string) => {
+    setColor('');
+    setColor1('');
+    const icon = iconList.find((icon) => icon.id === id);
+    if (icon?.default) {
+      if (icon) {
+        setColor1(icon.recommend);
+        const svgElement = document.getElementById(id);
+        if (svgElement) {
+          const paths = svgElement.querySelectorAll('path');
+          for (let i = 0; i < paths.length; i++) {
+            const classNames = paths[i].getAttribute('class');
+            if (classNames && classNames.includes('xian')) {
+              paths[i].setAttribute('fill', '#333333');
+            } else if (classNames && classNames.includes('mian')) {
+              paths[i].setAttribute('fill', icon.default);
+            }
+          }
+        }
+      }
+    } else {
+      setReDefault(<></>);
+      setTimeout(() => {
+        setReDefault(undefined);
+      }, 0);
+    }
+  };
+  //关联按钮
+  const association = (association: string) => {
+    // console.log(association);
+    const associationIcon = iconList.find((icon) => icon.name === association);
+    // console.log(associationIcon.id);
+    if (associationIcon) {
+      setSelectedId(associationIcon.id);
+    }
+  };
+  //分类数组
+  const aa: Map<string, any[]> = new Map<string, any[]>();
+  for (let i = 0; i < List.length; i++) {
+    const icon = List[i];
+    const type = icon.type;
+    if (aa.has(type)) {
+      aa.get(type)?.push(icon);
+    } else {
+      aa.set(type, [icon]);
+    }
+  }
+  // console.log('aa', aa);
+  const groupedIcons = Array.from(aa).reduce((acc, [type, icons]) => {
+    if (!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type] = acc[type].concat(icons);
+    // console.log(acc);
+    return acc;
+  }, {} as Record<string, any[]>);
+  //左侧分类
+  type MenuItem = Required<MenuProps>['items'][number];
+
+  function getItem(
+    label: React.ReactNode,
+    key: React.Key,
+    icon?: React.ReactNode,
+    children?: MenuItem[],
+    type?: 'group',
+  ): MenuItem {
+    return {
+      key,
+      icon,
+      children,
+      label,
+      type,
+    } as MenuItem;
+  }
+
+  const items: MenuProps['items'] = [
+    getItem('全部图标', '全部', <></>),
+    getItem('仪器', 'sub2', <></>, [
+      getItem('质谱仪', 'g1', null, [getItem(' 仪器', '仪器'), getItem('部件', '部件')]),
+      getItem('液相色谱仪', '液相色谱仪', null),
+      getItem('常用实验器', '常用实验器', null),
+    ]),
+    getItem('采集', 'sub3', <></>, [getItem('采集模式', '采集模式', null)]),
+    getItem('分析', 'sub4', <></>, [
+      getItem('谱图表达', '谱图表达', null),
+      getItem('谱图处理', '谱图处理', null),
+    ]),
+    getItem('应用', 'sub5', <></>, [
+      getItem('样本类型', '样本类型', null),
+      getItem('应用领域', '应用领域', null),
+    ]),
+  ];
+  const onClick: MenuProps['onClick'] = (e) => {
+    const value = e.key;
+    // console.log(e.key);
+    if (value) {
+      const newList = iconList.filter((icon) => icon.type.includes(value));
+      setList(newList);
+    } else {
+      setList(iconList);
+    }
+    if (value === '全部') {
+      setList(iconList);
+    }
+  };
+  return (
+    <>
+      <div className={styles.head}>
+        MSICON
+        <Badge count={shop.length}>
+          <ShoppingCartOutlined
+            style={{ color: 'white', marginLeft: '600px', fontSize: '40px' }}
+            onClick={showDrawer}
+          />
+        </Badge>
+      </div>
+      <div className={styles.top}>
+        <Search
+          placeholder="搜索"
+          onChange={onChange}
+          style={{
+            width: 800,
+            height: 100,
+            marginTop: '80px',
+            marginLeft: 'calc(50% - 400px)',
+          }}
+        ></Search>
+      </div>
+      <Menu
+        onClick={onClick}
+        style={{ width: 256, marginRight: '300px', position: 'fixed', top: '250px' }}
+        defaultOpenKeys={['sub2', 'sub3', 'sub4', 'sub5', 'g1']}
+        mode="inline"
+        items={items}
+      />
+      <div className={styles.main}>
+        <div style={{ margin: '0 auto' }}>
+          {Object.entries(groupedIcons).map(([type, icons]) => (
+            <>
+              <h2 style={{ marginBottom: '30px' }}>{type}</h2>
+              <div
+                key={type}
+                style={{ display: 'flex', flexWrap: 'wrap', width: '1600px', marginBottom: '35px' }}
+              >
+                {icons.map((icon) => {
+                  const IconComponent = icon.component;
+                  return (
+                    <div style={{ position: 'relative' }}>
+                      <IconComponent viewBox="0 0 24 24" key={icon.id} className={styles.svg} />
+                      <p
+                        style={{
+                          textAlign: 'center',
+                          width: '160px',
+                          whiteSpace: 'normal',
+                          marginLeft:'20px',
+                          marginTop: '-12px',
+                        }}
+                      >
+                        {icon.name}
+                      </p>
+                      <div className={styles.box}>
+                        <div className={styles.iconbox} onClick={() => setShopID(icon.id)}>
+                          {<ShoppingCartOutlined className={styles.icon} />}
+                        </div>
+                        <div className={styles.iconbox} onClick={() => showModal(icon.id)}>
+                          {<DownloadOutlined className={styles.icon} />}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+      <Modal
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        okText="下载"
+        cancelText="取消"
+        width="600"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          marginLeft: '-300px',
+          marginTop: '-300px',
+        }}
+      >
+        {reDefault || renderedIcons}
       </Modal>
       <Drawer
         title={
