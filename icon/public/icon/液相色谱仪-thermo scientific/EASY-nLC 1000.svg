@@ -1,0 +1,35 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 2.75V2.5H15.8V2.75H15.7Z" fill="#333333" class='xian'/>
+<path d="M15.6 2.69995H15.9V3.29995H15.6V2.69995Z" fill="#D9D9D9"/>
+<path d="M15.65 2.40002H15.85V2.55002H15.65V2.40002Z" fill="#333333" class='xian'/>
+<g filter="url(#filter0_i_2277_260)">
+<path d="M16.471 3.93983V5.50005C16.471 5.6105 16.3815 5.70005 16.271 5.70005H15.24C15.1296 5.70005 15.04 5.6105 15.04 5.50005V3.93996C15.04 3.91431 15.0499 3.88963 15.0676 3.87104L15.4315 3.4884H16.0813L16.4436 3.87108C16.4612 3.88965 16.471 3.91425 16.471 3.93983Z" fill="#EBEBEB" class='xian'/>
+</g>
+<path d="M15.4316 3.1C15.4316 3.04477 15.4764 3 15.5316 3H15.9796C16.0348 3 16.0796 3.04477 16.0796 3.1V3.49702H15.4316L15.4316 3.1Z" fill="#8FA8C6" class='xian'/>
+<path d="M6 5V15H18V5H6Z" fill="#DCDFE2" class='mian'/>
+<path d="M6 18V21H18V18H6Z" fill="#DCDFE2" class='mian'/>
+<path d="M16 5L15 21H18V5H16Z" fill="#6A96CD"/>
+<path d="M6 15V18H18V15H6Z" fill="#C1C1C1" class='xian'/>
+<path d="M7.19995 15.2V17.8H14.2V15.2H7.19995Z" fill="#000103"/>
+<path d="M14.5 15.2V17.8H17.5V15.2H14.5Z" fill="#A1A2AC" class='mian'/>
+<path d="M8.19995 16.5V17.5H13.2V16.5H8.19995Z" fill="#BFB5AD" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75037 4.97657C5.76302 4.57168 6.09491 4.25 6.5 4.25H17.5C17.9051 4.25 18.237 4.57168 18.2496 4.97657L18.7496 20.9766C18.756 21.1794 18.6798 21.3762 18.5385 21.522C18.3973 21.6677 18.203 21.75 18 21.75H6C5.79703 21.75 5.60272 21.6677 5.46145 21.522C5.32019 21.3762 5.24403 21.1794 5.25037 20.9766L5.75037 4.97657ZM7.22693 5.75L6.7738 20.25H17.2262L16.7731 5.75H7.22693Z" fill="#B3B3B3" class='xian'/>
+<path d="M9 8.2V12.8C9 12.9105 9.08954 13 9.2 13H14.3C14.4105 13 14.5 12.9105 14.5 12.8V8.2C14.5 8.08954 14.4105 8 14.3 8H9.2C9.08954 8 9 8.08954 9 8.2Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 8.25V12.75H14.25V8.25H9.25ZM8.75 8.2C8.75 7.95147 8.95147 7.75 9.2 7.75H14.3C14.5485 7.75 14.75 7.95147 14.75 8.2V12.8C14.75 13.0485 14.5485 13.25 14.3 13.25H9.2C8.95147 13.25 8.75 13.0485 8.75 12.8V8.2Z" fill="#454643" class='xian'/>
+<path d="M12 12.35C12 12.488 11.8881 12.6 11.75 12.6C11.6119 12.6 11.5 12.488 11.5 12.35C11.5 12.2119 11.6119 12.1 11.75 12.1C11.8881 12.1 12 12.2119 12 12.35Z" fill="#333333" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2581 11.75H9.25V11.25H14.2581V11.75Z" fill="#333333" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6768 9.32322C11.7744 9.42085 11.7744 9.57915 11.6768 9.67678L11.1768 10.1768C11.0791 10.2744 10.9209 10.2744 10.8232 10.1768C10.7256 10.0791 10.7256 9.92085 10.8232 9.82322L11.3232 9.32322C11.4209 9.22559 11.5791 9.22559 11.6768 9.32322Z" fill="#333333" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6768 9.57322C12.7744 9.67085 12.7744 9.82915 12.6768 9.92678L12.4268 10.1768C12.3291 10.2744 12.1709 10.2744 12.0732 10.1768C11.9756 10.0791 11.9756 9.92085 12.0732 9.82322L12.3232 9.57322C12.4209 9.47559 12.5791 9.47559 12.6768 9.57322Z" fill="#333333" class='xian'/>
+<defs>
+<filter id="filter0_i_2277_260" x="14.79" y="3.4884" width="1.68103" height="2.21167" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-0.25"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2277_260"/>
+</filter>
+</defs>
+</svg>

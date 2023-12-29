@@ -269,6 +269,7 @@ const Home = () => {
   const recommendColor = (id: string) => {
     setColor('');
     setColor1('');
+    setValue(1)
     const icon = iconList.find((icon) => icon.id === id);
     if (icon?.recommend) {
     if (icon) {
@@ -297,10 +298,11 @@ const Home = () => {
   const defaultColor = (id: string) => {
     setColor('');
     setColor1('');
+    setValue(1)
     const icon = iconList.find((icon) => icon.id === id);
     if (icon?.default) {
       if (icon) {
-        setColor1(icon.recommend);
+        setColor1(icon.default);
         const svgElement = document.getElementById(id);
         if (svgElement) {
           const paths = svgElement.querySelectorAll('path');
@@ -374,7 +376,7 @@ const Home = () => {
     getItem('仪器', 'sub2', <></>, [
       getItem('质谱仪', 'g1', null, [getItem(' 仪器', '仪器'), getItem('部件', '部件')]),
       getItem('液相色谱仪', '液相色谱仪', null),
-      getItem('常用实验器', '常用实验器', null),
+      getItem('常用实验仪器', '常用实验仪器', null),
     ]),
     getItem('采集', 'sub3', <></>, [getItem('采集模式', '采集模式', null)]),
     getItem('分析', 'sub4', <></>, [
@@ -441,7 +443,7 @@ const Home = () => {
                 {icons.map((icon) => {
                   const IconComponent = icon.component;
                   return (
-                    <div style={{ position: 'relative' }}>
+                    <div style={{ position: 'relative',marginBottom:'15px' }}>
                       <IconComponent viewBox="0 0 24 24" key={icon.id} className={styles.svg} />
                       <p
                         style={{
@@ -449,7 +451,7 @@ const Home = () => {
                           width: '160px',
                           whiteSpace: 'normal',
                           marginLeft:'20px',
-                          marginTop: '-12px',
+                          marginTop: '-26px',
                         }}
                       >
                         {icon.name}
@@ -510,10 +512,10 @@ const Home = () => {
                     <IconComponent
                       viewBox="0 0 24 24"
                       key={icon.id}
-                      style={{ width: '50px', height: '50px' }}
+                      style={{ width: '70px', height: '70px' }}
                     />
                     <div className={styles.shopDelete} onClick={() => deleteFromShop(id)}>
-                      <DeleteOutlined style={{ fontSize: '30px', color: 'white' }} />
+                      <DeleteOutlined style={{ fontSize: '50px', color: 'white' }} />
                     </div>
                   </div>
                 );
