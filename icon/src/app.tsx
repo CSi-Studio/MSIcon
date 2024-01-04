@@ -3,13 +3,15 @@ import { LinkOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
 import type { RunTimeLayoutConfig } from '@umijs/max';
-import { history, Link } from '@umijs/max';
+import { history, Link, Outlet } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import React from 'react';
+// import 'lib-flexible'; 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
+
 
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
@@ -43,31 +45,28 @@ export async function getInitialState(): Promise<{
   // }
   return {
     // fetchUserInfo,
-    // settings: defaultSettings as Partial<LayoutSettings>,
+    settings: defaultSettings as Partial<LayoutSettings>,
   };
 }
 
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
+  console.log('initialState',initialState.settings);
+  
   return {
     actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
-    avatarProps: {
-      src: initialState?.currentUser?.avatar,
-      title: <AvatarName />,
-      render: (_, avatarChildren) => {
-        return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
-      },
-    },
+    avatarProps:  <></>,
     waterMarkProps: {
       content: initialState?.currentUser?.name,
     },
-    footerRender: () => <Footer />,
+    rightContentRender: false,
+    // footerRender: () => <Footer />,
     onPageChange: () => {
       const { location } = history;
       // 如果没有登录，重定向到 login
-      if (!initialState?.currentUser && location.pathname !== loginPath) {
-        history.push(loginPath);
-      }
+      // if (!initialState?.currentUser && location.pathname !== loginPath) {
+      //   history.push(loginPath);
+      // }
     },
     bgLayoutImgList: [
       {
@@ -89,14 +88,8 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
         width: '331px',
       },
     ],
-    links: isDev
-      ? [
-          <Link key="openapi" to="/umi/plugin/openapi" target="_blank">
-            <LinkOutlined />
-            <span>OpenAPI 文档</span>
-          </Link>,
-        ]
-      : [],
+    
+   
     menuHeaderRender: undefined,
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
@@ -105,8 +98,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       // if (initialState?.loading) return <PageLoading />;
       return (
         <>
+         
           {children}
-          {isDev && (
+         
+          {/* {isDev && (
             <SettingDrawer
               disableUrlParams
               enableDarkTheme
@@ -118,7 +113,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
                 }));
               }}
             />
-          )}
+          )} */}
         </>
       );
     },

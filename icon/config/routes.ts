@@ -17,6 +17,12 @@ export default [
       hideInMenu: true,
       layout: false,
     },
+    {
+      path: '/IconLibrary',
+      component: './IconLibrary',
+      hideInMenu: true,
+      layout: false,
+    },
   {
     path: '*',
     layout: false,

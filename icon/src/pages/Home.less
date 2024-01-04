@@ -1,184 +1,316 @@
-* {
-    margin: 0;
-    padding: 0;
+ul,li{
+  padding: 0;
+  margin: 0;
+}.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: url(../../public/Rectangle\ 19@2x.png) no-repeat;
+  background-size: 100% 50%;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  padding-top: 22px;
+}
+.ms {
+  margin-left: 120px;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.ul {
+  display: flex;
+  width: 300px;
+  margin-right: 120px;
+  li {
+    height: 24px;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 24px;
   }
-  body {
-    overflow: hidden; /* 取消滚动条 */
-  }
-  .head {
-    width: 100%;
-    height: 100px;
-    padding-left: 45%;
-    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 100px;
-    background: #000;
-    position: fixed;
-    left:0;
-    top:0
-  }
-  .top {
+}
+.programme {
+  height: 82px;
+  margin-top: 149px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70.31px;
+}
+.study {
+  height: 36px;
+  margin-top: 24px;
+  color: #666666;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+
+.classify {
+  height: 55px;
+  margin-top: 189px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 46.88px;
+}
+.comb {
+  height: 36px;
+  margin-top: 16px;
+  color: #666666;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+.lei {
+  display: flex;
+  width: 1208px;
+  height: 96px;
+  margin-top: 60px;
+  overflow: hidden;
+  li {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    padding: 0 60px;
-  }
-  .svg {
-    width: 200px ;
-    height: 120px ;
-    margin-bottom: 26px;
-  }
-  
-  .box {
-    position: absolute;
-    top: 3px;
-    left: 14px;
-    width: 170px;
-    height: 170px;
-    background: #696969;
-    border: #000 1px solid;
-    opacity: 0;
+    box-sizing: border-box;
+    width: 282px;
+    height: 96px;
+    margin-right: 20px;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #8efd9f, #07cbfb);
+    background-clip: content-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
     div {
-      width: 168px;
-      height: 85px;
-      line-height: 85px;
-      text-align: center;
+      margin-top: 26px;
+      margin-left: 24px;
+      & p:nth-child(1) {
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      & p:nth-child(2) {
+        font-size: 12px;
+      }
     }
   }
-  .box:hover {
-    opacity: 1;
+}
+.lei li > p {
+  height: 56px;
+  margin-top: 10px;
+  margin-right: 24px;
+  font-weight: bolder;
+  font-size: 48px;
+  line-height: 56.25px;
+}
+.tutorial {
+  height: 55px;
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 46.88px;
+}
+.help {
+  height: 36px;
+  margin-top: 16px;
+  color: #666666;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+.helpbox {
+  display: flex;
+  justify-content: space-around;
+  width: 1250px;
+  height: 400px;
+  margin-top: 60px;
+  padding: 0;
+  li {
+    width: 384px;
+    height: 400px;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #8efd9f, #07cbfb);
+    background-clip: content-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
   }
-  .iconbox:hover {
-    background: #000;
-    cursor: pointer;
+  li:nth-child(1) > div:nth-child(1) {
+    width: 384px;
+    height: 120px;
+    font-size: 24px;
+    line-height: 120px;
+    text-align: center;
+    background: url(../../public/Mask\ group.png) no-repeat;
+    background-size: 100% 100%;
   }
-  .iconbox:hover .icon {
-    color: aqua;
+  li:nth-child(1) > div:nth-child(2) {
+    width: 336px;
+    height: 110px;
+    margin-top: 24px;
+    margin-left: 24px;
   }
-  .icon {
-    color: #fff;
-    font-size: 50px;
-  }
-  .main {
-    display: flex;
-    flex-wrap: 'wrap';
-    height: 80%;
-    overflow: auto;
-  }
-  .ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 445px;
-    li {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  .ul :nth-child(1) {
-    background: #ea8379;
-  }
-  .ul :nth-child(2) {
-    background: #7daee0;
-  }
-  .ul :nth-child(3) {
-    background: #b395bd;
-  }
-  .ul :nth-child(4) {
-    background: #299d8f;
-  }
-  .ul :nth-child(5) {
-    background: #e9c46a;
-  }
-  .ul :nth-child(6) {
-    background: #d87659;
-  }
-  .ul :nth-child(7) {
-    background: #55b7e6;
-  }
-  .ul :nth-child(8) {
-    background: #193e8f;
-  }
-  .ul :nth-child(9) {
-    background: #e53528;
-  }
-  .ul :nth-child(10) {
-    background: #f09739;
-  }
-  .ul :nth-child(11) {
-    background: #43978f;
-  }
-  .ul :nth-child(12) {
-    background: #9ec4be;
-  }
-  .ul :nth-child(13) {
-    background: #abd0f1;
-  }
-  .ul :nth-child(14) {
-    background: #dce9f4;
-  }
-  .ul :nth-child(15) {
-    background: #e56f5e;
-  }
-  .ul :nth-child(16) {
-    background: #f19685;
-  }
-  .ul :nth-child(17) {
-    background: #f6c957;
-  }
-  .ul :nth-child(18) {
-    background: #ffb77f;
-  }
-  .ul :nth-child(19) {
-    background: #fbe8d5;
-  }
-  .ul :nth-child(20) {
-    background: #fff;
-    border: #000 1px solid;
-  }
-  .ul :nth-child(21) {
-    background: #333333;
-  }
-  .bigsvg {
-    width: 180px;
-    height: 180px;
+  li:nth-child(1) > div:nth-child(3) {
+    width: 336px;
+    height: 110px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 24px;
   }
-  .shop {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-start;
-    width: 300px;
-    margin-left: 20px;
-  }
-  .shopDelete {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70px;
-    height: 70px;
-    line-height: 95px;
+
+  li:nth-child(2) > div:nth-child(1) {
+    width: 384px;
+    height: 120px;
+    font-size: 24px;
+    line-height: 120px;
     text-align: center;
-    background: #333;
-    opacity: 0;
+    background: url(../../public/Mask\ group1.png) no-repeat;
+    background-size: 100% 100%;
   }
-  .shopDelete:hover {
-    opacity: 1;
+  li:nth-child(2) > div:nth-child(2) {
+    width: 336px;
+    height: 110px;
+    margin-top: 24px;
+    margin-left: 24px;
   }
-  .down {
-    position: absolute;
-    bottom: 200px;
-    left: 100px;
-    width: 180px;
-    height: 50px;
-    line-height: 50px;
+  li:nth-child(2) > div:nth-child(3) {
+    width: 336px;
+    height: 110px;
+    margin-top: 20px;
+    margin-left: 24px;
+  }
+  li:nth-child(3) > div:nth-child(1) {
+    width: 384px;
+    height: 120px;
+    font-size: 24px;
+    line-height: 120px;
     text-align: center;
-    background: #ddd;
-    border-radius: 30px;
+    background: url(../../public/Mask\ group2.png) no-repeat;
+    background-size: 100% 100%;
   }
-  .down:hover {
-    cursor: pointer;
+  li:nth-child(3) > div:nth-child(2) {
+    width: 336px;
+    height: 110px;
+    margin-top: 24px;
+    margin-left: 24px;
   }
-  
+  li:nth-child(3) > div:nth-child(3) {
+    width: 336px;
+    height: 110px;
+    margin-left: 24px;
+  }
+}
+.disc {
+  width: 4px;
+  height: 4px;
+  margin-top: 8px;
+  background-image: linear-gradient(to right, #66e4df, #d2f752);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.title {
+  display: flex;
+  width: 336px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.imgbox {
+  width: 336px;
+  height: 75px;
+  margin-top: 8px;
+  border: 1px #ccc solid;
+  img{
+    margin-left: 18px;
+    margin-top: 12px;
+  }
+}
+.imgbox2 {
+  width: 336px;
+  height: 54px;
+  margin-top: 8px;
+  border: 1px #ccc solid;
+  img{
+    margin-left: 18px;
+  }
+}
+.imgbox3 {
+  width: 336px;
+  height: 96px;
+  margin-top: 8px;
+  border: 1px #ccc solid;
+  img{
+    margin-left: 40px;
+    margin-top: 8px;
+  }
+}
+.about {
+  margin-top: 120px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.box {
+  display: flex;
+  width: 1200px;
+  height: 200px;
+}
+.text {
+  width: 744px;
+  height: 200px;
+  margin-top: 24px;
+  color: #666666;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.img {
+  width: 432px;
+  height: 200px;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 240px;
+  margin-top: 120px;
+  background: url(../../public/Rectangle\ 22.png) no-repeat;
+  background-size: 100% 100%;
+  > div {
+    width: 1440px;
+    height: 240px;
+    ul:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin-top: 48px;
+      margin-left: 120px;
+      li {
+        width: 300px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: start;
+      }
+      li:nth-child(1) {
+        font-weight: bolder;
+        font-size: 30px;
+      }
+    }
+    ul:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin-left: 120px;
+      margin-top: 10px;
+      li {
+        width: 300px;
+        height: 24px;
+        font-size: 12px;
+        color:#666;
+      }
+      li:nth-child(1) {
+        width: 230px;
+        font-size: 16px;
+        margin-right: 70px;
+      }
+    }
+  }
+}
