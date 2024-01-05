@@ -13,6 +13,7 @@ import iconList from './IconDown';
 import { Link } from '@umijs/max';
 const { Search } = Input;
 
+
 const IconLibrary = () => {
   //下载 SVG 文件
   const handleDownload = (id: string) => {
@@ -129,22 +130,35 @@ const IconLibrary = () => {
     if (shop.includes(id)) {
       setShop(shop.filter((itemId) => itemId !== id));
     } else {
-      setShop([...shop, id]);
+      shop.push(id);
+      setShop([...shop]);
     }
+    // console.log('shop',shop,id);
+
+    localStorage.setItem('num', JSON.stringify(shop));
   };
+  const numStr = localStorage.getItem('num');
+ const num = numStr ? JSON.parse(numStr) : [];
+  // console.log('num',num);
+
+  
   const deleteFromShop = (id: string) => {
-    setShop(shop.filter((itemId) => itemId !== id));
+    const filter= shop.filter((itemId) => itemId!== id);
+    setShop(filter);
+    localStorage.setItem('num', JSON.stringify(filter));
   };
   const down = () => {
-    shop.forEach((id) => {
+    num.forEach((id) => {
       handleDownload(id);
     });
+    localStorage.removeItem('num');
   };
   const onClose = () => {
     setOpen(false);
   };
   const shopClear = () => {
     setShop([]);
+    localStorage.removeItem('num');
   };
   //搜索
   const [List, setList] = useState(iconList);
@@ -375,7 +389,7 @@ const IconLibrary = () => {
   const items: MenuProps['items'] = [
     getItem('全部图标', '全部', <></>),
     getItem('仪器', 'sub2', <></>, [
-      getItem('质谱仪', 'g1', null, [getItem(' 仪器', '仪器'), getItem('部件', '部件')]),
+      getItem('质谱仪', 'g1', null, [getItem(' 仪器', '质谱仪-仪器'), getItem('部件', '部件')]),
       getItem('液相色谱仪', '液相色谱仪', null),
       getItem('常用实验仪器', '常用实验仪器', null),
     ]),
@@ -407,18 +421,20 @@ const IconLibrary = () => {
        <div className={styles.head}>
         <div className={styles.ms}>MS-ICON</div>
         <ul className={styles.ul1}>
-          <li>
-            <Link to="/" style={{ textDecoration: 'none', color: '#000000' }}>
+          <li >
+          <Link to="/" style={{ textDecoration: 'none', color: '#000000' }}>
               首页
             </Link>
           </li>
-          <li>
+          <li  style={{fontWeight:'700'}}>
             <Link to="/IconLibrary" style={{ textDecoration: 'none', color: '#000000' }}>
               官方图标库
             </Link>
           </li>
-          <li>
-            <ShoppingCartOutlined style={{ fontSize: '24px' }} />
+          <li onClick={showDrawer}>
+          <Badge count={(num && num.length) || 0}>
+          <ShoppingCartOutlined style={{ fontSize: '24px' }} />
+          </Badge>  
           </li>
         </ul>
       </div>
@@ -430,17 +446,18 @@ const IconLibrary = () => {
           size="large"
         ></Search>
       </div>
+
+      <div className={styles.main}>
       <Menu
         onClick={onClick}
-        style={{ width: 256, marginRight: '300px', position: 'fixed', top: '250px' }}
+        style={{ width: 256,height:700,}}
         defaultOpenKeys={['sub2', 'sub3', 'sub4', 'sub5', 'g1']}
         mode="inline"
         items={items}
       />
-      <div className={styles.main}>
-        <div style={{ margin: '0 auto' }}>
+        <div style={{height:'100%',overflow:'auto',margin:'auto'}}>
           {Object.entries(groupedIcons).map(([type, icons]) => (
-            <>
+            <div >
               <h2 style={{ marginBottom: '30px' }}>{type}</h2>
               <div
                 key={type}
@@ -474,7 +491,7 @@ const IconLibrary = () => {
                   );
                 })}
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
@@ -507,9 +524,9 @@ const IconLibrary = () => {
         onClose={onClose}
         open={open}
       >
-        {shop.length ? (
+        {num.length ? (
           <div className={styles.shop}>
-            {shop.map((id) => {
+            {num.map((id) => {
               const icon = iconList.find((icon) => icon.id === id); // 根据id找到对应的图标对象
               if (icon) {
                 const IconComponent = icon.component;

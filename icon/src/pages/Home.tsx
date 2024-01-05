@@ -1,14 +1,70 @@
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import { ClearOutlined, DeleteOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Link } from '@umijs/max';
+import { Badge, Drawer } from 'antd';
+import { useState } from 'react';
 import styles from './Home.less';
+import iconList from './IconDown';
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+  const shopClear = () => {
+    localStorage.removeItem('num');
+  };
+  const numStr = localStorage.getItem('num');
+  const num = numStr ? JSON.parse(numStr) : [];
+
+  const deleteFromShop = (id: string) => {
+    const filter= num.filter((itemId) => itemId!== id);
+    localStorage.setItem('num', JSON.stringify(filter));
+  };
+   //下载 SVG 文件
+   const handleDownload = (id: string) => {
+    const selectedIcon = iconList.find((icon) => icon.id === id); // 根据id查找对应的icon对象
+    if (!selectedIcon) {
+      console.error('Icon not found'); // 如果没有找到对应的icon，则输出错误信息
+      return;
+    }
+    const { path, name } = selectedIcon; // 获取SVG文件路径和名称
+    // 获取 SVG 文件
+    fetch(path)
+      .then((response) => response.text())
+      .then((svgData) => {
+        // 解析 SVG 文件
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgData, 'image/svg+xml');
+        
+        // 创建 SVG 文件下载链接
+        const serializer = new XMLSerializer();
+        const modifiedSvgData = serializer.serializeToString(doc);
+        const blob = new Blob([modifiedSvgData], { type: 'image/svg+xml' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${name}.svg`; // 使用icon对象的名称作为文件名
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+  };
+  const down = () => {
+    num.forEach((id) => {
+      handleDownload(id);
+    });
+    localStorage.removeItem('num');
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+    const showDrawer = () => {
+    setOpen(true);
+  };
   return (
     <div className={styles.main}>
       <div className={styles.head}>
         <div className={styles.ms}>MS-ICON</div>
         <ul className={styles.ul}>
-          <li>
+          <li style={{fontWeight:'700'}}>
             <Link to="/" style={{ textDecoration: 'none', color: '#000000' }}>
               首页
             </Link>
@@ -18,8 +74,10 @@ const Home = () => {
               官方图标库
             </Link>
           </li>
-          <li>
-            <ShoppingCartOutlined style={{ fontSize: '24px' }} />
+          <li onClick={showDrawer}>
+          <Badge count={num?.length}>
+          <ShoppingCartOutlined style={{ fontSize: '24px' }} />
+          </Badge>  
           </li>
         </ul>
       </div>
@@ -33,7 +91,7 @@ const Home = () => {
             <p>仪器类</p>
             <p>Instrument</p>
           </div>
-          <p>130+</p>
+          <p>150+</p>
         </li>
         <li>
           <div>
@@ -47,7 +105,7 @@ const Home = () => {
             <p>分析类</p>
             <p>Analysis</p>
           </div>
-          <p>10+</p>
+          <p>20+</p>
         </li>
         <li>
           <div>
@@ -63,34 +121,70 @@ const Home = () => {
         <li>
           <div>下载</div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>选择自己想要的图标</p><div></div></div>
-            <div className={styles.imgbox}><img src="./Group 44340.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>选择自己想要的图标</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox}>
+              <img src="./Group 44340.png" />
+            </div>
           </div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>点击下载</p><div></div></div>
-            <div className={styles.imgbox}><img src="./Group 44341.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>点击下载</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox}>
+              <img src="./Group 44341.png" />
+            </div>
           </div>
         </li>
         <li>
           <div>加入购物车</div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>选择自己想要的图标</p><div></div></div>
-            <div className={styles.imgbox}><img src="./Group 44340.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>选择自己想要的图标</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox}>
+              <img src="./Group 44340.png" />
+            </div>
           </div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>点击购物车，在购物车中批量下载</p><div></div></div>
-            <div className={styles.imgbox}><img src="./Group 44342.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>点击购物车，在购物车中批量下载</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox}>
+              <img src="./Group 44342.png" />
+            </div>
           </div>
         </li>
         <li>
           <div>自定义颜色</div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>选择自己想要的图标,并点击下载</p><div></div></div>
-            <div className={styles.imgbox2}><img src="./Group 44344.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>选择自己想要的图标,并点击下载</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox2}>
+              <img src="./Group 44344.png" />
+            </div>
           </div>
           <div>
-            <div className={styles.title}><div className={styles.disc}></div><p>按照自己的喜好改变颜色</p><div></div></div>
-            <div className={styles.imgbox3}><img src="./Group 44345.png"/></div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p>按照自己的喜好改变颜色</p>
+              <div></div>
+            </div>
+            <div className={styles.imgbox3}>
+              <img src="./Group 44345.png" />
+            </div>
           </div>
         </li>
       </ul>
@@ -119,6 +213,48 @@ const Home = () => {
           </ul>
         </div>
       </div>
+
+      <Drawer
+        title={
+          <div onClick={shopClear} style={{ cursor: 'pointer' }}>
+            {' '}
+            <ClearOutlined />
+            清空购物车
+          </div>
+        }
+        placement="right"
+        onClose={onClose}
+        open={open}
+      >
+        {num.length ? (
+          <div className={styles.shop}>
+            {num.map((id) => {
+              const icon = iconList.find((icon) => icon.id === id); // 根据id找到对应的图标对象
+              if (icon) {
+                const IconComponent = icon.component;
+                return (
+                  <div style={{ position: 'relative' }}>
+                    <IconComponent
+                      viewBox="0 0 24 24"
+                      key={icon.id}
+                      style={{ width: '70px', height: '70px' }}
+                    />
+                    <div className={styles.shopDelete} onClick={() => deleteFromShop(id)}>
+                      <DeleteOutlined style={{ fontSize: '50px', color: 'white' }} />
+                    </div>
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        ) : (
+          <p>快把喜欢的图标加入购物车吧~</p>
+        )}
+        <div className={styles.down} onClick={() => down()}>
+          下载
+        </div>
+      </Drawer>
     </div>
   );
 };
