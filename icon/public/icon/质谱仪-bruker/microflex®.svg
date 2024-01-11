@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.5 7V18H16.5V7H7.5Z" fill="#DEDEDE" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 7C6.75 6.58579 7.08579 6.25 7.5 6.25H16.5C16.9142 6.25 17.25 6.58579 17.25 7V18C17.25 18.4142 16.9142 18.75 16.5 18.75H7.5C7.08579 18.75 6.75 18.4142 6.75 18V7ZM8.25 7.75V17.25H15.75V7.75H8.25Z" fill="#333333" class='xian'/>
+<path d="M10 2V18H14V2H10Z" fill="#32436D" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 2C9.25 1.58579 9.58579 1.25 10 1.25H14C14.4142 1.25 14.75 1.58579 14.75 2V18C14.75 18.4142 14.4142 18.75 14 18.75H10C9.58579 18.75 9.25 18.4142 9.25 18V2ZM10.75 2.75V17.25H13.25V2.75H10.75Z" fill="#333333" class='xian'/>
+<path d="M7.5 18V22H16.5V18H7.5Z" fill="#DEDEDE" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 18C6.75 17.5858 7.08579 17.25 7.5 17.25H16.5C16.9142 17.25 17.25 17.5858 17.25 18V22C17.25 22.4142 16.9142 22.75 16.5 22.75H7.5C7.08579 22.75 6.75 22.4142 6.75 22V18ZM8.25 18.75V21.25H15.75V18.75H8.25Z" fill="#333333" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C12.1381 2.75 12.25 2.86193 12.25 3V11.6802C12.25 11.8182 12.1381 11.9302 12 11.9302C11.8619 11.9302 11.75 11.8182 11.75 11.6802V3C11.75 2.86193 11.8619 2.75 12 2.75Z" fill="white"/>
+</svg>

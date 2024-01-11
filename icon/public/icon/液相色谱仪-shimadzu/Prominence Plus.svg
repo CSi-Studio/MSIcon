@@ -1,0 +1,43 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 15V22H12V15H5Z" fill="#454E57" class='mian'/>
+<path d="M5 11.5V12.75H7.5V11.5H5Z" fill="#161815"/>
+<path d="M5 8V9.25H7.5V8H5Z" fill="#161815"/>
+<path d="M5.5 12.5V15H7.5V12.5H5.5Z" fill="#2F333C"/>
+<path d="M5.5 9V11.5H7.5V9H5.5Z" fill="#2F333C"/>
+<path d="M7.5 11.5V15H11.5V11.5H7.5Z" fill="#454E57" class='mian'/>
+<path d="M7.5 8V11.5H11.5V8H7.5Z" fill="#454E57" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.1H5V14.9H12V15.1Z" fill="black" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.6H5V11.4H12V11.6Z" fill="black" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.10002H5V7.90002H12V8.10002Z" fill="black" class='xian'/>
+<path d="M5 2V5H7.5V2H5Z" fill="#454E57" class='mian'/>
+<path d="M7.5 2V5H11.5V2H7.5Z" fill="#454E57" class='mian'/>
+<path d="M5 4.5V5.75H7.5V4.5H5Z" fill="#161815"/>
+<path d="M5.5 5.5V8H7.5V5.5H5.5Z" fill="#2F333C"/>
+<path d="M7.5 4.5V8H11.5V4.5H7.5Z" fill="#454E57" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 4.60002H5V4.40002H12V4.60002Z" fill="black" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 2C4.25 1.58579 4.58579 1.25 5 1.25H12C12.4142 1.25 12.75 1.58579 12.75 2V22C12.75 22.4142 12.4142 22.75 12 22.75H5C4.58579 22.75 4.25 22.4142 4.25 22V2ZM5.75 2.75V21.25H11.25V2.75H5.75Z" fill="#333333" class='xian'/>
+<path d="M10.25 5.5C10.25 5.77614 10.0261 6 9.75 6C9.47386 6 9.25 5.77614 9.25 5.5C9.25 5.22386 9.47386 5 9.75 5C10.0261 5 10.25 5.22386 10.25 5.5Z" fill="#656D7A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.74995 5.05001C9.50142 5.05001 9.29995 5.25148 9.29995 5.50001C9.29995 5.74854 9.50142 5.95001 9.74995 5.95001C9.99848 5.95001 10.2 5.74854 10.2 5.50001C10.2 5.25148 9.99848 5.05001 9.74995 5.05001ZM9.19995 5.50001C9.19995 5.19626 9.44619 4.95001 9.74995 4.95001C10.0537 4.95001 10.3 5.19626 10.3 5.50001C10.3 5.80377 10.0537 6.05001 9.74995 6.05001C9.44619 6.05001 9.19995 5.80377 9.19995 5.50001Z" fill="black"/>
+<path d="M12 15V22H19V15H12Z" fill="#454E57" class='mian'/>
+<path d="M12 11.5V12.75H14.5V11.5H12Z" fill="#161815"/>
+<path d="M13 17V17.5H14.5V17H13Z" fill="#272B34"/>
+<path d="M13 19V19.5H14.5V19H13Z" fill="#272B34"/>
+<path d="M12 8V9.25H14.5V8H12Z" fill="#161815"/>
+<path d="M12.5 12.5V15H14.5V12.5H12.5Z" fill="#2F333C"/>
+<path d="M12.5 9V11.5H14.5V9H12.5Z" fill="#2F333C"/>
+<path d="M14.5 11.5V15H18.5V11.5H14.5Z" fill="#454E57" class='mian'/>
+<path d="M14.5 8V11.5H18.5V8H14.5Z" fill="#454E57" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 11.6H12V11.4H19V11.6Z" fill="black" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 8.10002H12V7.90002H19V8.10002Z" fill="black" class='xian'/>
+<path d="M12 2V5H14.5V2H12Z" fill="#454E57" class='mian'/>
+<path d="M14.5 2V5H18.5V2H14.5Z" fill="#454E57" class='mian'/>
+<path d="M12 4.5V5.75H14.5V4.5H12Z" fill="#161815"/>
+<path d="M12.5 5.5V8H14.5V5.5H12.5Z" fill="#2F333C"/>
+<path d="M14.5 4.5V8H18.5V4.5H14.5Z" fill="#454E57" class='mian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.60002H12V4.40002H19V4.60002Z" fill="black" class='xian'/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 2C11.25 1.58579 11.5858 1.25 12 1.25H19C19.4142 1.25 19.75 1.58579 19.75 2V22C19.75 22.4142 19.4142 22.75 19 22.75H12C11.5858 22.75 11.25 22.4142 11.25 22V2ZM12.75 2.75V21.25H18.25V2.75H12.75Z" fill="#333333" class='xian'/>
+<path d="M9.59998 5.19998C9.59998 5.14475 9.64475 5.09998 9.69998 5.09998H9.79998C9.8552 5.09998 9.89998 5.14475 9.89998 5.19998V5.79998C9.89998 5.8552 9.8552 5.89998 9.79998 5.89998H9.69998C9.64475 5.89998 9.59998 5.8552 9.59998 5.79998V5.19998Z" fill="#4E5668"/>
+<path d="M10.25 9C10.25 9.27614 10.0261 9.5 9.75 9.5C9.47386 9.5 9.25 9.27614 9.25 9C9.25 8.72386 9.47386 8.5 9.75 8.5C10.0261 8.5 10.25 8.72386 10.25 9Z" fill="#656D7A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.74995 8.55001C9.50142 8.55001 9.29995 8.75148 9.29995 9.00001C9.29995 9.24854 9.50142 9.45001 9.74995 9.45001C9.99848 9.45001 10.2 9.24854 10.2 9.00001C10.2 8.75148 9.99848 8.55001 9.74995 8.55001ZM9.19995 9.00001C9.19995 8.69626 9.44619 8.45001 9.74995 8.45001C10.0537 8.45001 10.3 8.69626 10.3 9.00001C10.3 9.30377 10.0537 9.55001 9.74995 9.55001C9.44619 9.55001 9.19995 9.30377 9.19995 9.00001Z" fill="black" class='xian'/>
+<path d="M9.59998 8.69998C9.59998 8.64475 9.64475 8.59998 9.69998 8.59998H9.79998C9.8552 8.59998 9.89998 8.64475 9.89998 8.69998V9.29998C9.89998 9.3552 9.8552 9.39998 9.79998 9.39998H9.69998C9.64475 9.39998 9.59998 9.3552 9.59998 9.29998V8.69998Z" fill="#4E5769"/>
+</svg>
