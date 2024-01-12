@@ -6,11 +6,11 @@ import {
 } from '@ant-design/icons';
 import type { MenuProps, RadioChangeEvent } from 'antd';
 import { Badge, Button, ColorPicker, Drawer, Input, Menu, Modal, Radio } from 'antd';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ReactComponent as Right } from '../../public/icon/向右.svg';
 import styles from './IconLibrary.less';
 import iconList from './IconDown';
-import { Link } from '@umijs/max';
+import { FormattedMessage, Link, SelectLang, getIntl } from '@umijs/max';
 const { Search } = Input;
 
 
@@ -87,6 +87,7 @@ const IconLibrary = () => {
       setReDefault(undefined);
     }, 0);
   };
+
   const [color, setColor] = useState('');
   const [color1, setColor1] = useState('');
   const set = (color: string) => {
@@ -127,12 +128,14 @@ const IconLibrary = () => {
     setOpen(true);
   };
   const setShopID = (id: string) => {
-    if (shop.includes(id)) {
-      setShop(shop.filter((itemId) => itemId !== id));
-    } else {
-      shop.push(id);
-      setShop([...shop]);
-    }
+    const index = shop.indexOf(id);
+  if (index > -1) {
+    shop.splice(index, 1);
+    setShop([...shop]);
+  } else {
+    shop.push(id);
+    setShop([...shop]);
+  }
     // console.log('shop',shop,id);
 
     localStorage.setItem('num', JSON.stringify(shop));
@@ -198,13 +201,13 @@ const IconLibrary = () => {
                 style={{
                   position: 'relative',
                   top: '-160px',
-                  left: '240px',
+                  left: '220px',
                   color: '#1677FF',
                   cursor: 'pointer',
                 }}
                 onClick={() => association(icon.association)}
               >
-                关联图标: {icon.association}{' '}
+                <FormattedMessage id={'Associated icons'}/>: {icon.association}
                 <Right
                   style={{ width: '16px', height: '16px', position: 'relative', top: '3px' }}
                 />
@@ -215,34 +218,38 @@ const IconLibrary = () => {
                 position: 'relative',
                 top: '-140px',
                 left: '240px',
-                width: '200px',
+                width: '240px',
                 whiteSpace: 'normal',
+                fontSize:'16px'
               }}
             >
-              名称：{icon.name}
+              <FormattedMessage id={'name'}/>：{icon.name}
             </p>
-            <Button
+           <div  style={{position: 'relative', top: '-100px', left: '220px', width:'520px',height:'50px',display:'flex', flexDirection: 'column'}}>
+           <div>
+           <Button
               type="primary"
-              style={{ position: 'relative', top: '-100px', left: '230px' }}
               onClick={()=>defaultColor(icon.id)}
             >
-              默认图标
+              <FormattedMessage id={'default icon'}/>
             </Button>
             <Button
               type="primary"
-              style={{ position: 'relative', top: '-100px', left: '250px' }}
               onClick={() => recommendColor(icon.id)}
+              style={{marginLeft:'20px'}}
             >
-              推荐配色
+              <FormattedMessage id={'Recommend color'}/>
             </Button>
+           </div>
             <Radio.Group
               onChange={onChange1}
               value={value}
-              style={{ position: 'relative', top: '-60px', left: '40px' }}
+              style={{marginTop:'20px'}}
             >
-              <Radio value={1}>改变线条颜色</Radio>
-              <Radio value={2}>改变填充颜色</Radio>
+              <Radio value={1}><FormattedMessage id={'Change line color'}/></Radio>
+              <Radio value={2}><FormattedMessage id={'Change fill color'}/></Radio>
             </Radio.Group>
+           </div>
             <ul className={styles.ul}>
           <li onClick={() => set('#ea8379')}></li>
           <li onClick={() => set('#7daee0')}></li>
@@ -385,22 +392,22 @@ const IconLibrary = () => {
       type,
     } as MenuItem;
   }
-
+  const intl = getIntl();
   const items: MenuProps['items'] = [
-    getItem('全部图标', '全部', <></>),
-    getItem('仪器', 'sub2', <></>, [
-      getItem('质谱仪', 'g1', null, [getItem(' 仪器', '质谱仪-仪器'), getItem('部件', '部件')]),
-      getItem('液相色谱仪', '液相色谱仪', null),
-      getItem('常用实验仪器', '常用实验仪器', null),
+    getItem(<FormattedMessage id={'All icons'}/>,  intl.formatMessage({ id:'whole'}), <></>),
+    getItem(<FormattedMessage id={'Instrument'}/>, 'sub2', <></>, [
+      getItem(<FormattedMessage id={'Mass spectrometer'}/>, 'g1', null, [getItem(<FormattedMessage id={'Instrument'}/>, intl.formatMessage({ id:'Mass spectrometer-Instrument'})), getItem(<FormattedMessage id={'Component'}/>, intl.formatMessage({ id:'Component'}))]),
+      getItem(<FormattedMessage id={'Liquid chromatograph'}/>,  intl.formatMessage({ id:'Liquid chromatograph'}), null),
+      getItem(<FormattedMessage id={'Common experimental instruments'}/>, intl.formatMessage({ id:'Common experimental instruments'}), null),
     ]),
-    getItem('采集', 'sub3', <></>, [getItem('采集模式', '采集模式', null)]),
-    getItem('分析', 'sub4', <></>, [
-      getItem('谱图表达', '谱图表达', null),
-      getItem('谱图处理', '谱图处理', null),
+    getItem(<FormattedMessage id={'Gather'}/>, 'sub3', <></>, [getItem(<FormattedMessage id={'Acquisition mode'}/>, intl.formatMessage({ id:'Acquisition mode'}), null)]),
+    getItem(<FormattedMessage id={'Analysis'}/>, 'sub4', <></>, [
+      getItem(<FormattedMessage id={'Spectral representation'}/>, intl.formatMessage({ id:'Spectral representation'}), null),
+      getItem(<FormattedMessage id={'Spectral processing'}/>, intl.formatMessage({ id:'Spectral processing'}), null),
     ]),
-    getItem('应用', 'sub5', <></>, [
-      getItem('样本类型', '样本类型', null),
-      getItem('应用领域', '应用领域', null),
+    getItem(<FormattedMessage id={'Application'}/>, 'sub5', <></>, [
+      getItem(<FormattedMessage id={'Sample type'}/>, intl.formatMessage({ id:'Sample type'}), null),
+      getItem(<FormattedMessage id={'Application area'}/>, intl.formatMessage({ id:'Application area'}), null),
     ]),
   ];
   const onClick: MenuProps['onClick'] = (e) => {
@@ -412,7 +419,7 @@ const IconLibrary = () => {
     } else {
       setList(iconList);
     }
-    if (value === '全部') {
+    if (value === intl.formatMessage({ id:'whole'})) {
       setList(iconList);
     }
   };
@@ -423,12 +430,17 @@ const IconLibrary = () => {
         <ul className={styles.ul1}>
           <li >
           <Link to="/" style={{ textDecoration: 'none', color: '#000000' }}>
-              首页
+          <FormattedMessage id={'HomePage'}/>
             </Link>
           </li>
           <li  style={{fontWeight:'700'}}>
             <Link to="/IconLibrary" style={{ textDecoration: 'none', color: '#000000' }}>
-              官方图标库
+            <FormattedMessage id={'OfficialIconLibrary'}/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/About" style={{ textDecoration: 'none', color: '#000000' }}>
+            <FormattedMessage id={'About Us'}/>
             </Link>
           </li>
           <li onClick={showDrawer}>
@@ -436,11 +448,14 @@ const IconLibrary = () => {
           <ShoppingCartOutlined style={{ fontSize: '24px' }} />
           </Badge>  
           </li>
+          <li>
+          <SelectLang style={{marginTop:'-8px'}}/>
+          </li>
         </ul>
       </div>
       <div className={styles.top}>
         <Search
-          placeholder="搜索"
+          placeholder={intl.formatMessage({ id:'search'})}
           onChange={onChange}
           className={styles.search}
           size="large"
@@ -450,7 +465,7 @@ const IconLibrary = () => {
       <div className={styles.main}>
       <Menu
         onClick={onClick}
-        style={{ width: 256,height:700,}}
+        style={{ width: 300,height:700,}}
         defaultOpenKeys={['sub2', 'sub3', 'sub4', 'sub5', 'g1']}
         mode="inline"
         items={items}
@@ -499,8 +514,8 @@ const IconLibrary = () => {
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
-        okText="下载"
-        cancelText="取消"
+        okText={intl.formatMessage({ id:'download'})}
+        cancelText={intl.formatMessage({ id:'cancellation'})}
         width="600"
         style={{
           position: 'absolute',
@@ -517,7 +532,7 @@ const IconLibrary = () => {
           <div onClick={shopClear} style={{ cursor: 'pointer' }}>
             {' '}
             <ClearOutlined />
-            清空购物车
+            <FormattedMessage id={'empty cart'}/>
           </div>
         }
         placement="right"
@@ -547,10 +562,10 @@ const IconLibrary = () => {
             })}
           </div>
         ) : (
-          <p>快把喜欢的图标加入购物车吧~</p>
+          <p><FormattedMessage id={'Quickly'}/></p>
         )}
         <div className={styles.down} onClick={() => down()}>
-          下载
+        <FormattedMessage id={'download'}/>
         </div>
       </Drawer>
     </>

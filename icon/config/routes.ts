@@ -23,6 +23,12 @@ export default [
       hideInMenu: true,
       layout: false,
     },
+    {
+      path: '/About',
+      component: './About',
+      hideInMenu: true,
+      layout: false,
+    },
   {
     path: '*',
     layout: false,

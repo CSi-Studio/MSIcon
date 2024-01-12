@@ -1,24 +1,30 @@
 import { ClearOutlined, DeleteOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import { Link } from '@umijs/max';
+import { FormattedMessage, Link, SelectLang, getIntl } from '@umijs/max';
 import { Badge, Drawer } from 'antd';
 import { useState } from 'react';
 import styles from './Home.less';
 import iconList from './IconDown';
 
+
+
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [shop, setShop] = useState<string[]>([]);
+
   const shopClear = () => {
+    setShop([])
     localStorage.removeItem('num');
   };
   const numStr = localStorage.getItem('num');
   const num = numStr ? JSON.parse(numStr) : [];
 
   const deleteFromShop = (id: string) => {
-    const filter= num.filter((itemId) => itemId!== id);
+    const filter= shop.filter((itemId) => itemId!== id);
+    setShop(filter);
     localStorage.setItem('num', JSON.stringify(filter));
   };
-   //下载 SVG 文件
-   const handleDownload = (id: string) => {
+  //下载 SVG 文件
+  const handleDownload = (id: string) => {
     const selectedIcon = iconList.find((icon) => icon.id === id); // 根据id查找对应的icon对象
     if (!selectedIcon) {
       console.error('Icon not found'); // 如果没有找到对应的icon，则输出错误信息
@@ -32,7 +38,7 @@ const Home = () => {
         // 解析 SVG 文件
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgData, 'image/svg+xml');
-        
+
         // 创建 SVG 文件下载链接
         const serializer = new XMLSerializer();
         const modifiedSvgData = serializer.serializeToString(doc);
@@ -48,7 +54,7 @@ const Home = () => {
       });
   };
   const down = () => {
-    num.forEach((id) => {
+    shop.forEach((id) => {
       handleDownload(id);
     });
     localStorage.removeItem('num');
@@ -56,142 +62,151 @@ const Home = () => {
   const onClose = () => {
     setOpen(false);
   };
-    const showDrawer = () => {
+  const showDrawer = () => {
     setOpen(true);
+    setShop(num)
   };
   return (
     <div className={styles.main}>
       <div className={styles.head}>
         <div className={styles.ms}>MS-ICON</div>
         <ul className={styles.ul}>
-          <li style={{fontWeight:'700'}}>
+          <li style={{ fontWeight: '700' }}>
             <Link to="/" style={{ textDecoration: 'none', color: '#000000' }}>
-              首页
+            <FormattedMessage id={'HomePage'}/>
             </Link>
           </li>
           <li>
             <Link to="/IconLibrary" style={{ textDecoration: 'none', color: '#000000' }}>
-              官方图标库
+            <FormattedMessage id={'OfficialIconLibrary'}/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/About" style={{ textDecoration: 'none', color: '#000000' }}>
+            <FormattedMessage id={'About Us'}/>
             </Link>
           </li>
           <li onClick={showDrawer}>
-          <Badge count={num?.length}>
-          <ShoppingCartOutlined style={{ fontSize: '24px' }} />
-          </Badge>  
+            <Badge count={num?.length}>
+              <ShoppingCartOutlined style={{ fontSize: '24px' }} />
+            </Badge>
+          </li>
+          <li>
+          <SelectLang style={{marginTop:'-8px'}}/>
           </li>
         </ul>
       </div>
-      <div className={styles.programme}>质谱领域可视化元素设计方案</div>
-      <div className={styles.study}>为质谱学的学习和应用提供更直观、易于理解的工具</div>
-      <div className={styles.classify}>图标分类</div>
-      <div className={styles.comb}>对质谱学相关知识和概念进行统一梳理</div>
+      <div className={styles.programme}> <FormattedMessage id={'Design'}/></div>
+      <div className={styles.study}> <FormattedMessage id={'The design'}/></div>
+      <div className={styles.classify}><FormattedMessage id={'Icon classification'}/></div>
+      <div className={styles.comb}><FormattedMessage id={'Unified'}/></div>
       <ul className={styles.lei}>
         <li>
-          <div>
-            <p>仪器类</p>
-            <p>Instrument</p>
-          </div>
+            <div>
+            <p><FormattedMessage id={'Instrument class'}/></p>
+            </div>
           <p>150+</p>
         </li>
         <li>
           <div>
-            <p>采集类</p>
-            <p>Acquisition</p>
+            <p><FormattedMessage id={'Collection class'}/></p>
           </div>
           <p>10+</p>
         </li>
         <li>
           <div>
-            <p>分析类</p>
-            <p>Analysis</p>
+            <p><FormattedMessage id={'Analysis class'}/></p>
           </div>
           <p>20+</p>
         </li>
         <li>
           <div>
-            <p>应用类</p>
-            <p>Application</p>
+            <p><FormattedMessage id={'Application class'}/></p>
           </div>
           <p>60+</p>
         </li>
       </ul>
-      <div className={styles.tutorial}>图标库使用教程</div>
-      <div className={styles.help}>帮助你更快速的了解如何使用</div>
+      <div className={styles.tutorial}><FormattedMessage id={'Tutorial on using icon libraries'}/></div> 
+      <div className={styles.help}><FormattedMessage id={'Help'}/></div>
       <ul className={styles.helpbox}>
         <li>
-          <div>下载</div>
+          <div><FormattedMessage id={'download'}/></div> 
           <div>
             <div className={styles.title}>
               <div className={styles.disc}></div>
-              <p>选择自己想要的图标</p>
-              <div></div>
+              <p><FormattedMessage id={'Choose the icon you want'}/></p>
             </div>
             <div className={styles.imgbox}>
-              <img src="./Group 44340.png" />
+              <p><FormattedMessage id={'Instrument - Liquid chromatograph'}/></p>
+              <img src="./Group 44346.png" />
             </div>
           </div>
           <div>
             <div className={styles.title}>
               <div className={styles.disc}></div>
-              <p>点击下载</p>
-              <div></div>
+              <p><FormattedMessage id={'Click to download'}/></p>
             </div>
             <div className={styles.imgbox}>
-              <img src="./Group 44341.png" />
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>加入购物车</div>
-          <div>
-            <div className={styles.title}>
-              <div className={styles.disc}></div>
-              <p>选择自己想要的图标</p>
-              <div></div>
-            </div>
-            <div className={styles.imgbox}>
-              <img src="./Group 44340.png" />
-            </div>
-          </div>
-          <div>
-            <div className={styles.title}>
-              <div className={styles.disc}></div>
-              <p>点击购物车，在购物车中批量下载</p>
-              <div></div>
-            </div>
-            <div className={styles.imgbox}>
-              <img src="./Group 44342.png" />
+            <p><FormattedMessage id={'Instrument - Liquid chromatograph'}/></p>
+              <img src="./Group 44347.png" />
             </div>
           </div>
         </li>
         <li>
-          <div>自定义颜色</div>
+          <div><FormattedMessage id={'Add to shopping cart'}/></div>
           <div>
             <div className={styles.title}>
               <div className={styles.disc}></div>
-              <p>选择自己想要的图标,并点击下载</p>
-              <div></div>
+              <p><FormattedMessage id={'Choose the icon you want'}/></p>
+            </div>
+            <div className={styles.imgbox}>
+            <p><FormattedMessage id={'Instrument - Liquid chromatograph'}/></p>
+            <img src="./Group 44346.png" />
+            </div>
+          </div>
+          <div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p><FormattedMessage id={'Click'}/></p>
+            </div>
+            <div className={styles.imgbox}>
+            <p><FormattedMessage id={'Instrument - Liquid chromatograph'}/></p>
+              <img src="./Group 44349.png" />
+            </div>
+          </div>
+        </li>
+        <li>
+          <div><FormattedMessage id={'Custom Colors'}/></div>
+          <div>
+            <div className={styles.title}>
+              <div className={styles.disc}></div>
+              <p><FormattedMessage id={ 'Select'}/></p>
             </div>
             <div className={styles.imgbox2}>
-              <img src="./Group 44344.png" />
+            <p><FormattedMessage id={'Instrument - Liquid chromatograph'}/></p>
+              <img src="./Group 44347.png" />
             </div>
           </div>
           <div>
             <div className={styles.title}>
               <div className={styles.disc}></div>
-              <p>按照自己的喜好改变颜色</p>
-              <div></div>
+              <p><FormattedMessage id={'Change'}/></p>
             </div>
             <div className={styles.imgbox3}>
-              <img src="./Group 44345.png" />
+              <img src="./Group 44351.png" />
+              <ul>
+                <li><FormattedMessage id={'Recommend color'}/></li>
+                <li><FormattedMessage id={'Change line color'}/></li>
+                <li><FormattedMessage id={'Change fill color'}/></li>
+              </ul>
             </div>
           </div>
         </li>
       </ul>
-      <div className={styles.about}>关于质谱图标库</div>
+      <div className={styles.about}><FormattedMessage id={'About'}/></div>
       <div className={styles.box}>
         <div className={styles.text}>
-          质谱是一门高度复杂且专业化的科学领域，它涉及到许多复杂的概念、技术、设备，对于初学者或非专业人士来说，理解和学习质谱学是十分困难的。我们提供了一套统一的可视化元素设计方案，为质谱领域知识的普及和传播提供了一种新的思路。我们希望将这套可视化元素设计方案能当做复杂的质谱概念和更广泛的受众之间的桥梁，为质谱学习和科学交流营造一个更方便、更有吸引力的环境。
+        <FormattedMessage id={'Mass spectrometry'}/>
         </div>
         <div className={styles.img}>
           <img src="./Frame 3473967.png" />
@@ -202,14 +217,14 @@ const Home = () => {
           <ul>
             <li>MS-ICON</li>
             <li>MS-ICON</li>
-            <li>友情链接</li>
-            <li>关于我们</li>
+            <li><FormattedMessage id={'Friendship link'}/></li>
+            <li><FormattedMessage id={'About Us'}/></li>
           </ul>
           <ul>
-            <li>MS-ICON是质谱领域图标样式的开源图标库</li>
-            <li>使用指南</li>
-            <li>icon-font</li>
-            <li>git-hub</li>
+            <li><FormattedMessage id={'MS-ICON'}/></li>
+            <li><FormattedMessage id={'Usage Guide'}/></li>
+            <li><a href='https://www.iconfont.cn/'>icon-font</a></li>
+            <li><img src="./github _github 1.png" alt="" /></li>
           </ul>
         </div>
       </div>
@@ -219,16 +234,16 @@ const Home = () => {
           <div onClick={shopClear} style={{ cursor: 'pointer' }}>
             {' '}
             <ClearOutlined />
-            清空购物车
+            <FormattedMessage id={'empty cart'}/>
           </div>
         }
         placement="right"
         onClose={onClose}
         open={open}
       >
-        {num.length ? (
+        {shop.length ? (
           <div className={styles.shop}>
-            {num.map((id) => {
+            {shop.map((id) => {
               const icon = iconList.find((icon) => icon.id === id); // 根据id找到对应的图标对象
               if (icon) {
                 const IconComponent = icon.component;
@@ -249,10 +264,10 @@ const Home = () => {
             })}
           </div>
         ) : (
-          <p>快把喜欢的图标加入购物车吧~</p>
+          <p><FormattedMessage id={'Quickly'}/></p>
         )}
         <div className={styles.down} onClick={() => down()}>
-          下载
+        <FormattedMessage id={'download'}/>
         </div>
       </Drawer>
     </div>

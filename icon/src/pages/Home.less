@@ -1,7 +1,9 @@
-ul,li{
-  padding: 0;
+ul,
+li {
   margin: 0;
-}.main {
+  padding: 0;
+}
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,20 +19,20 @@ ul,li{
   padding-top: 22px;
 }
 .ms {
+  margin-top: -5px;
   margin-left: 120px;
   font-weight: bolder;
   font-size: 30px;
-  margin-top: -5px;
 }
 .ul {
   display: flex;
-  width: 300px;
+  width: 600px;
+  height: 24px;
   margin-right: 105px;
+  font-size: 16px;
+  line-height: 24px;
   li {
-    height: 24px;
     margin-left: 40px;
-    font-size: 16px;
-    line-height: 24px;
   }
 }
 .programme {
@@ -83,27 +85,28 @@ ul,li{
     border: 1px solid transparent;
     border-radius: 4px;
     div {
-      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 96px;
       margin-left: 24px;
-      & p:nth-child(1) {
-        margin-bottom: 5px;
+      p {
         font-weight: 500;
         font-size: 18px;
+        margin-top: 14px;
       }
-      & p:nth-child(2) {
-        font-size: 12px;
-      }
+    }
+    & p:nth-child(2) {
+      height: 56px;
+      margin-top: 15px;
+      margin-right: 24px;
+      font-weight: bolder;
+      font-size: 48px;
+      line-height: 56px;
     }
   }
 }
-.lei li > p {
-  height: 56px;
-  margin-top: 15px;
-  margin-right: 24px;
-  font-weight: bolder;
-  font-size: 48px;
-  line-height: 56.25px;
-}
+
 .tutorial {
   height: 55px;
   margin-top: 100px;
@@ -125,7 +128,7 @@ ul,li{
   height: 400px;
   margin-top: 60px;
   padding: 0;
-  li {
+  >li {
     width: 384px;
     height: 400px;
     background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #8efd9f, #07cbfb);
@@ -202,9 +205,9 @@ ul,li{
   width: 4px;
   height: 4px;
   margin-top: 8px;
+  margin-right: 5px;
   background-image: linear-gradient(to right, #66e4df, #d2f752);
   border-radius: 50%;
-  margin-right: 5px;
 }
 .title {
   display: flex;
@@ -218,17 +221,26 @@ ul,li{
   height: 75px;
   margin-top: 8px;
   border: 1px #ccc solid;
-  img{
+  p{
+    font-size: 12px;
     margin-left: 18px;
     margin-top: 12px;
+  }
+  img {
+    margin-left: 18px;
   }
 }
 .imgbox2 {
   width: 336px;
-  height: 54px;
+  height: 64px;
   margin-top: 8px;
   border: 1px #ccc solid;
-  img{
+  p{
+    font-size: 12px;
+    margin-left: 18px;
+    margin-top: 6px;
+  }
+  img {
     margin-left: 18px;
   }
 }
@@ -237,9 +249,21 @@ ul,li{
   height: 96px;
   margin-top: 8px;
   border: 1px #ccc solid;
-  img{
-    margin-left: 40px;
+  display: flex;
+  ul{
+    margin-top: 10px;
+    margin-left: 4px;
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    justify-content: space-between;
+    li{
+      font-size: 14px;
+    }
+  }
+  img {
     margin-top: 8px;
+    margin-left: 40px;
   }
 }
 .about {
@@ -250,7 +274,7 @@ ul,li{
 .box {
   display: flex;
   width: 1200px;
-  height: 200px;
+  height: 280px;
 }
 .text {
   width: 744px;
@@ -299,18 +323,18 @@ ul,li{
       display: flex;
       justify-content: space-between;
       width: 1200px;
-      margin-left: 120px;
       margin-top: 10px;
+      margin-left: 120px;
       li {
         width: 300px;
         height: 24px;
+        color: #666;
         font-size: 12px;
-        color:#666;
       }
       li:nth-child(1) {
         width: 230px;
-        font-size: 16px;
         margin-right: 70px;
+        font-size: 16px;
       }
     }
   }
