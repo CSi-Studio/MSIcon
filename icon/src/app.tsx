@@ -3,12 +3,20 @@ import { LinkOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
 import type { RunTimeLayoutConfig } from '@umijs/max';
+<<<<<<< HEAD
+=======
+import { history, Link, Outlet } from '@umijs/max';
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import React from 'react';
 // import 'lib-flexible'; 
+<<<<<<< HEAD
 // const isDev = process.env.NODE_ENV === 'development';
+=======
+const isDev = process.env.NODE_ENV === 'development';
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
 const loginPath = '/user/login';
 
 
@@ -21,6 +29,7 @@ export async function getInitialState(): Promise<{
   loading?: boolean;
   fetchUserInfo?: () => Promise<API.CurrentUser | undefined>;
 }> {
+<<<<<<< HEAD
   // const fetchUserInfo = async () => {
   //   try {
   //     const msg = await queryCurrentUser({
@@ -32,6 +41,19 @@ export async function getInitialState(): Promise<{
   //   }
   //   return undefined;
   // };
+=======
+  const fetchUserInfo = async () => {
+    try {
+      const msg = await queryCurrentUser({
+        skipErrorHandler: true,
+      });
+      return msg.data;
+    } catch (error) {
+      history.push(loginPath);
+    }
+    return undefined;
+  };
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   // 如果不是登录页面，执行
   // const { location } = history;
   // if (location.pathname !== loginPath) {
@@ -50,7 +72,11 @@ export async function getInitialState(): Promise<{
 
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
+<<<<<<< HEAD
   // console.log('initialState',initialState.settings);
+=======
+  console.log('initialState',initialState.settings);
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   
   return {
     actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
@@ -61,6 +87,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     rightContentRender: false,
     // footerRender: () => <Footer />,
     onPageChange: () => {
+<<<<<<< HEAD
+=======
+      const { location } = history;
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
       // 如果没有登录，重定向到 login
       // if (!initialState?.currentUser && location.pathname !== loginPath) {
       //   history.push(loginPath);

@@ -407,7 +407,11 @@ const IconLibrary = () => {
     ]),
     getItem(<FormattedMessage id={'Application'}/>, 'sub5', <></>, [
       getItem(<FormattedMessage id={'Sample type'}/>, intl.formatMessage({ id:'Sample type'}), null),
+<<<<<<< HEAD
       getItem(<FormattedMessage id={'application area'}/>, intl.formatMessage({ id:'Application area'}), null),
+=======
+      getItem(<FormattedMessage id={'Application area'}/>, intl.formatMessage({ id:'Application area'}), null),
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     ]),
   ];
   const onClick: MenuProps['onClick'] = (e) => {

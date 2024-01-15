@@ -6,7 +6,10 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
     "build": "max build",
+<<<<<<< HEAD
     "build:prod": "cross-env UMI_ENV=prod max build",
+=======
+>>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     "deploy": "npm run build && npm run gh-pages",
     "dev": "npm run start:dev",
     "gh-pages": "gh-pages -d dist",
