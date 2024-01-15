@@ -131,7 +131,7 @@ export default defineConfig({
    */
   headScripts: [
     // 解决首次加载时白屏的问题
-    { src: '/scripts/loading.js', async: true },
+    { src: '/MSIcon/scripts/loading.js', async: true },
   ],
   //================ pro 插件配置 =================
   presets: ['umi-presets-pro'],
@@ -159,4 +159,6 @@ export default defineConfig({
   },
   esbuildMinifyIIFE: true,
   requestRecord: {},
+  history: { type: 'hash' },
+  publicPath: 'https://csi-studio.github.io/MSIcon/'
 });
