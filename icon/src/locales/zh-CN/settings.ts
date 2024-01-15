@@ -207,8 +207,6 @@ export default {
   'Sample type-Biological-Animal-Tissue':'样本类型-生物-动物-组织',
   'intestines':'肠',
   'lungs':'肺',
-<<<<<<< HEAD
-=======
   'liver':'肝脏',
   'brain':'脑',
   'spleen':'脾',
@@ -262,5 +260,4 @@ export default {
   'food':'食物',
   'judicial':'司法',
   'Instrument development':'仪器研发'
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
 };

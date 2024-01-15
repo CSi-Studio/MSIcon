@@ -211,9 +211,6 @@ export default {
   'interstitial fluid':'Interstitial fluid',
   'Sample type-Biological-Animal-Tissue':'Sample type-Biological-Animal-Tissue',
   'intestines':'Intestines',
-<<<<<<< HEAD
-  'lungs':'lungs',
-=======
   'lungs':'Lungs',
   'liver':'Liver',
   'brain':'Brain',
@@ -268,5 +265,4 @@ export default {
   'food':'Food',
   'judicial':'Judicial',
   'Instrument development':'Instrument development'
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
 };

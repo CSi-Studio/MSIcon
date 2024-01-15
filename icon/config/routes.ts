@@ -15,29 +15,17 @@ export default [
       path: '/',
       component: './Home',
       hideInMenu: true,
-<<<<<<< HEAD
-      key: 'home',
-=======
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
       layout: false,
     },
     {
       path: '/IconLibrary',
       component: './IconLibrary',
-<<<<<<< HEAD
-      key: 'iconLibrary',
-=======
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
       hideInMenu: true,
       layout: false,
     },
     {
       path: '/About',
       component: './About',
-<<<<<<< HEAD
-      key: 'about',
-=======
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
       hideInMenu: true,
       layout: false,
     },
@@ -45,9 +33,5 @@ export default [
     path: '*',
     layout: false,
     component: './404',
-<<<<<<< HEAD
-    key: '404',
-=======
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },
 ];

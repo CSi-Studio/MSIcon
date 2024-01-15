@@ -237,11 +237,7 @@ import { ReactComponent as SVG235} from '../../public/icon/常用实验仪器-�
 import { ReactComponent as SVG236} from '../../public/icon/常用实验仪器-其他/进样瓶_2.svg';
 import { ReactComponent as SVG237} from '../../public/icon/采集模式/PRM.svg';
 import { ReactComponent as SVG238} from '../../public/icon/采集模式/PRM_4D.svg';
-<<<<<<< HEAD
 import { getIntl } from '@umijs/max';
-=======
-import { getIntl} from '@/.umi/plugin-locale';
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
 const intl = getIntl();
 
 const iconList = [
@@ -1473,599 +1469,332 @@ const iconList = [
     id: '183',
     component: SVG183,
     path: './icon/样本类型/生物/动物/组织/肺.svg',
-<<<<<<< HEAD
-    name: '肺',
-=======
     name: intl.formatMessage({ id:'lungs'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     recommend:'#CA7A61',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '184',
     component: SVG184,
     path: './icon/样本类型/生物/动物/组织/肝脏.svg',
-<<<<<<< HEAD
-    name: '肝脏',
-=======
     name: intl.formatMessage({ id: 'liver'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     recommend:'#CE6748',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '185',
     component: SVG185,
     path: './icon/样本类型/生物/动物/组织/脑.svg',
-<<<<<<< HEAD
-    name: '脑',
-=======
     name: intl.formatMessage({ id: 'brain'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     recommend:'#DDB6A1',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '186',
     component: SVG186,
     path: './icon/样本类型/生物/动物/组织/脾.svg',
-<<<<<<< HEAD
-    name: '脾',
-=======
     name: intl.formatMessage({ id: 'spleen'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '187',
     component: SVG187,
     path: './icon/样本类型/生物/动物/组织/肾脏.svg',
-<<<<<<< HEAD
-    name: '肾脏',
-=======
     name: intl.formatMessage({ id: 'kidney'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     recommend:'#CA3A26',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '188',
     component: SVG188,
     path: './icon/样本类型/生物/动物/组织/胃.svg',
-<<<<<<< HEAD
-    name: '胃',
-=======
     name: intl.formatMessage({ id: 'stomach'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     recommend:'#CA7A61',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '189',
     component: SVG189,
     path: './icon/样本类型/生物/动物/组织/心脏.svg',
-<<<<<<< HEAD
-    name: '心脏',
-=======
     name: intl.formatMessage({ id: 'heart'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '190',
     component: SVG190,
     path: './icon/样本类型/生物/动物/组织/胰腺.svg',
-<<<<<<< HEAD
-    name: '胰腺',
-=======
     name: intl.formatMessage({ id: 'pancreas'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal-Tissue'}),
   },{
     id: '191',
     component: SVG191,
     path: './icon/样本类型/生物/动物/大鼠.svg',
-<<<<<<< HEAD
-    name: '大鼠',
-    recommend:'#E8DDDB',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'rat'}),
     recommend:'#E8DDDB',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '192',
     component: SVG192,
     path: './icon/样本类型/生物/动物/小鼠.svg',
-<<<<<<< HEAD
-    name: '小鼠',
-    recommend:'#E8DDDB',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'mice'}),
     recommend:'#E8DDDB',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '193',
     component: SVG193,
     path: './icon/样本类型/生物/动物/兔.svg',
-<<<<<<< HEAD
-    name: '兔',
-    recommend:'#DFC6C6',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'rabbit'}),
     recommend:'#DFC6C6',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '194',
     component: SVG194,
     path: './icon/样本类型/生物/动物/马.svg',
-<<<<<<< HEAD
-    name: '马',
-    recommend:'#D37B37',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'horse'}),
     recommend:'#D37B37',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '195',
     component: SVG195,
     path: './icon/样本类型/生物/动物/羊.svg',
-<<<<<<< HEAD
-    name: '羊',
-    recommend:'#DEE0E7',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'sheep'}),
     recommend:'#DEE0E7',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '196',
     component: SVG196,
     path: './icon/样本类型/生物/动物/猴.svg',
-<<<<<<< HEAD
-    name: '猴',
-    recommend:'#D6AE5D',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'monkey'}),
     recommend:'#D6AE5D',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '197',
     component: SVG197,
     path: './icon/样本类型/生物/动物/鸡.svg',
-<<<<<<< HEAD
-    name: '鸡',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'chicken'}),
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '198',
     component: SVG198,
     path: './icon/样本类型/生物/动物/狗.svg',
-<<<<<<< HEAD
-    name: '狗',
-    recommend:'#FABF87',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'dog'}),
     recommend:'#FABF87',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '199',
     component: SVG199,
     path: './icon/样本类型/生物/动物/猪.svg',
-<<<<<<< HEAD
-    name: '猪',
-    recommend:'#EFA3A3',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'pig'}),
     recommend:'#EFA3A3',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '233',
     component: SVG233,
     path: './icon/样本类型/生物/动物/猫.svg',
-<<<<<<< HEAD
-    name: '猫',
-    recommend:'#DB8A58',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'cat'}),
     recommend:'#DB8A58',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '200',
     component: SVG200,
     path: './icon/样本类型/生物/动物/鸽.svg',
-<<<<<<< HEAD
-    name: '鸽',
     recommend:'#FFF9EC',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'pigeon'}),
-    recommend:'#FFF9EC',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
+
   },{
-    id: '201',
     component: SVG201,
     path: './icon/样本类型/生物/动物/青蛙.svg',
-<<<<<<< HEAD
-    name: '青蛙',
-    recommend:'#A5E736',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'frog'}),
     recommend:'#A5E736',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '202',
     component: SVG202,
     path: './icon/样本类型/生物/动物/男.svg',
-<<<<<<< HEAD
-    name: '男',
-    recommend:'#B1D1E9',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'male'}),
     recommend:'#B1D1E9',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '203',
     component: SVG203,
     path: './icon/样本类型/生物/动物/女.svg',
-<<<<<<< HEAD
-    name: '女',
-    recommend:'#E9B9B1',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'female'}),
     recommend:'#E9B9B1',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '204',
     component: SVG204,
     path: './icon/样本类型/生物/动物/唾液.svg',
-<<<<<<< HEAD
-    name: '唾液',
-    recommend:'#CCCCCC',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'saliva'}),
     recommend:'#CCCCCC',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '205',
     component: SVG205,
     path: './icon/样本类型/生物/动物/尿液.svg',
-<<<<<<< HEAD
-    name: '尿液',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'urine'}),
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '206',
     component: SVG206,
     path: './icon/样本类型/生物/动物/粪便.svg',
-<<<<<<< HEAD
-    name: '粪便',
-    recommend:'#B6804E',
-    type: '样本类型-生物-动物',
-=======
     name: intl.formatMessage({ id: 'feces'}),
     recommend:'#B6804E',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '207',
     component: SVG207,
     path: './icon/样本类型/生物/微生物/病毒.svg',
-<<<<<<< HEAD
-    name: '病毒',
-    recommend:'#72DBF3',
-    type: '样本类型-生物-微生物',
-=======
     name: intl.formatMessage({ id: 'virus'}),
     recommend:'#72DBF3',
     type: intl.formatMessage({ id: 'Sample type-Biological Microbial'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '208',
     component: SVG208,
     path: './icon/样本类型/生物/微生物/蘑菇.svg',
-<<<<<<< HEAD
-    name: '蘑菇',
-    recommend:'#D69F46',
-    type: '样本类型-生物-微生物',
-=======
     name: intl.formatMessage({ id: 'mushroom'}),
     recommend:'#D69F46',
     type: intl.formatMessage({ id: 'Sample type-Biological Microbial'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '209',
     component: SVG209,
     path: './icon/样本类型/生物/微生物/细菌.svg',
-<<<<<<< HEAD
-    name: '细菌',
-    type: '样本类型-生物-微生物',
-=======
     name: intl.formatMessage({ id: 'germ'}),
     type: intl.formatMessage({ id: 'Sample type-Biological Microbial'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '210',
     component: SVG210,
     path: './icon/样本类型/生物/微生物/藻类.svg',
-<<<<<<< HEAD
-    name: '藻类',
-    recommend:'#97A738',
-    type: '样本类型-生物-微生物',
-=======
     name: intl.formatMessage({ id: 'alga'}),
     recommend:'#97A738',
     type: intl.formatMessage({ id: 'Sample type-Biological Microbial'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '211',
     component: SVG211,
     path: './icon/样本类型/生物/微生物/真菌.svg',
-<<<<<<< HEAD
-    name: '真菌',
-    recommend:'#FFCF63',
-    type: '样本类型-生物-微生物',
-=======
     name: intl.formatMessage({ id: 'fungus'}),
     recommend:'#FFCF63',
     type: intl.formatMessage({ id: 'Sample type-Biological Microbial'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '212',
     component: SVG212,
     path: './icon/样本类型/生物/植物/种子.svg',
-<<<<<<< HEAD
-    name: '种子',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'seed'}),
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '213',
     component: SVG213,
     path: './icon/样本类型/生物/植物/根.svg',
-<<<<<<< HEAD
-    name: '根',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'root'}),
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '214',
     component: SVG214,
     path: './icon/样本类型/生物/植物/茎.svg',
-<<<<<<< HEAD
-    name: '茎',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'stem'}),
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '215',
     component: SVG215,
     path: './icon/样本类型/生物/植物/叶.svg',
-<<<<<<< HEAD
-    name: '叶',
-    recommend:'#629C15',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'leaf'}),
     recommend:'#629C15',
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '216',
     component: SVG216,
     path: './icon/样本类型/生物/植物/花.svg',
-<<<<<<< HEAD
-    name: '花',
-    recommend:'#FFB1CE',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'flower'}),
     recommend:'#FFB1CE',
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '217',
     component: SVG217,
     path: './icon/样本类型/生物/植物/果实.svg',
-<<<<<<< HEAD
-    name: '果实',
-    recommend:'#E05954',
-    type: '样本类型-生物-植物',
-=======
     name: intl.formatMessage({ id: 'fruits'}),
     recommend:'#E05954',
     type: intl.formatMessage({ id: 'Sample type-Biological-Plant'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '218',
     component: SVG218,
     path: './icon/样本类型/食品/谷物.svg',
-<<<<<<< HEAD
-    name: '谷物',
-    recommend:'#FFDD47',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'grain'}),
     recommend:'#FFDD47',
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '219',
     component: SVG219,
     path: './icon/样本类型/食品/鸡蛋.svg',
-<<<<<<< HEAD
-    name: '鸡蛋',
-    recommend:'#E7BC82',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'egg'}),
     recommend:'#E7BC82',
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '220',
     component: SVG220,
     path: './icon/样本类型/食品/奶制品.svg',
-<<<<<<< HEAD
-    name: '奶制品',
-    recommend:'#FFE068',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'Dairy'}),
     recommend:'#FFE068',
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '221',
     component: SVG221,
     path: './icon/样本类型/食品/肉类.svg',
-<<<<<<< HEAD
-    name: '肉类',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'meat'}),
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '222',
     component: SVG222,
     path: './icon/样本类型/食品/蔬菜.svg',
-<<<<<<< HEAD
-    name: '蔬菜',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'vegetable'}),
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '223',
     component: SVG223,
     path: './icon/样本类型/食品/水果.svg',
-<<<<<<< HEAD
-    name: '水果',
-    type: '样本类型-食品',
-=======
     name: intl.formatMessage({ id: 'fruit'}),
     type: intl.formatMessage({ id: 'Sample type-Food'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '224',
     component: SVG224,
     path: './icon/应用领域/材料与能源.svg',
-<<<<<<< HEAD
-    name: '材料与能源',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id: 'Materials and Energy'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '225',
     component: SVG225,
     path: './icon/应用领域/地球科学与资源.svg',
-<<<<<<< HEAD
-    name: '地球科学与资源',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'Earth Science and Resources'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '226',
     component: SVG226,
     path: './icon/应用领域/环境.svg',
-<<<<<<< HEAD
-    name: '环境',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'environment'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '227',
     component: SVG227,
     path: './icon/应用领域/临床质谱.svg',
-<<<<<<< HEAD
-    name: '临床质谱',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'Clinical mass spectrometry'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '228',
     component: SVG228,
     path: './icon/应用领域/生命科学与医药.svg',
-<<<<<<< HEAD
-    name: '生命科学与医药',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'Life Sciences and Medicine'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '229',
     component: SVG229,
     path: './icon/应用领域/食品.svg',
-<<<<<<< HEAD
-    name: '食品',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'food'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '230',
     component: SVG230,
     path: './icon/应用领域/司法.svg',
-<<<<<<< HEAD
-    name: '司法',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'judicial'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   },{
     id: '231',
     component: SVG231,
     path: './icon/应用领域/仪器研发.svg',
-<<<<<<< HEAD
-    name: '仪器研发',
-    type: '应用领域',
-=======
     name: intl.formatMessage({ id:'Instrument development'}),
     type: intl.formatMessage({ id:'Application area'}),
->>>>>>> 8dca9c5beacfbc021209cfabe0ad55b954b70951
   }
 ];
 export default iconList
