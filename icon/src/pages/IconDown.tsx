@@ -237,7 +237,7 @@ import { ReactComponent as SVG235} from '../../public/icon/常用实验仪器-�
 import { ReactComponent as SVG236} from '../../public/icon/常用实验仪器-其他/进样瓶_2.svg';
 import { ReactComponent as SVG237} from '../../public/icon/采集模式/PRM.svg';
 import { ReactComponent as SVG238} from '../../public/icon/采集模式/PRM_4D.svg';
-import { getIntl} from '@/.umi/plugin-locale';
+import { getIntl } from '@umijs/max';
 const intl = getIntl();
 
 const iconList = [

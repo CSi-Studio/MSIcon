@@ -159,4 +159,7 @@ export default defineConfig({
   },
   esbuildMinifyIIFE: true,
   requestRecord: {},
+  outputPath: 'build',
+  publicPath:
+  REACT_APP_ENV === 'development' ? './' : 'https://csi-studio.github.io/MSIcon/',
 });

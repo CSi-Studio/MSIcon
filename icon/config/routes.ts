@@ -15,17 +15,20 @@ export default [
       path: '/',
       component: './Home',
       hideInMenu: true,
+      key: 'home',
       layout: false,
     },
     {
       path: '/IconLibrary',
       component: './IconLibrary',
+      key: 'iconLibrary',
       hideInMenu: true,
       layout: false,
     },
     {
       path: '/About',
       component: './About',
+      key: 'about',
       hideInMenu: true,
       layout: false,
     },
@@ -33,5 +36,6 @@ export default [
     path: '*',
     layout: false,
     component: './404',
+    key: '404',
   },
 ];
