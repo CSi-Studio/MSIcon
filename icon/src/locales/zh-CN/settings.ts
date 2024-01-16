@@ -92,7 +92,7 @@ export default {
   'All icons':'全部图标',
   'whole':'全部',
   'Instrument':'仪器',
-  'Mass spectrometer-instrument':'质谱仪-仪器',
+  'Mass spectrometer-Instrument':'质谱仪-仪器',
   'Component':'部件',
   'Liquid chromatograph':'液相色谱仪',
   'Common experimental instruments':'常用实验仪器',

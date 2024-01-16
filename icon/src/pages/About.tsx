@@ -177,6 +177,22 @@ const About = () => {
         <FormattedMessage id={'download'}/>
         </div>
       </Drawer>
+      <div className={styles.footer}>
+        <div>
+          <ul>
+            <li>MS-ICON</li>
+            <li>MS-ICON</li>
+            <li><FormattedMessage id={'Friendship link'}/></li>
+            <li><FormattedMessage id={'About Us'}/></li>
+          </ul>
+          <ul>
+            <li><FormattedMessage id={'MS-ICON'}/></li>
+            <li><FormattedMessage id={'Usage Guide'}/></li>
+            <li><a href='https://www.iconfont.cn/'>icon-font</a></li>
+            <li><a href="https://github.com/CSi-Studio/MSIcon"><img src="./github _github 1.png" alt="" /></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
