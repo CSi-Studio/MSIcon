@@ -273,7 +273,7 @@ const iconList = [
     id: '4',
     component: SVG4,
     path: './icon/质谱仪-thermo scientific/ISQ EM.svg',
-    name: 'ISQ™ EC Single Quadrupole MS',
+    name: 'ISQ™ EM Single Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
   {
