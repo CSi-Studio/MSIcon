@@ -80,6 +80,8 @@ const IconLibrary = () => {
     }, 0);
   };
   const handleCancel = () => {
+    setColor('')
+    setColor1('')
     setValue(1);
     setReDefault(<></>)
     setTimeout(() => {
@@ -137,7 +139,6 @@ const IconLibrary = () => {
     setShop([...shop]);
   }
     // console.log('shop',shop,id);
-
     localStorage.setItem('num', JSON.stringify(shop));
   };
   const numStr = localStorage.getItem('num');
