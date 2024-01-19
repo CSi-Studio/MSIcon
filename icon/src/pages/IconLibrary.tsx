@@ -72,6 +72,8 @@ const IconLibrary = () => {
   };
   const handleOk = () => {
     handleDownload(selectedId);
+    setColor('')
+    setColor1('')
     setValue(1);
     setReDefault(<></>)
     setTimeout(() => {

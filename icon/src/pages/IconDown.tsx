@@ -1,41 +1,41 @@
 import { ReactComponent as SVG0 } from '../../public/icon/质谱仪-thermo scientific/质谱仪.svg';
-import { ReactComponent as SVG1 } from '../../public/icon/质谱仪-thermo scientific/DFS GC-HRMS.svg';
+import { ReactComponent as SVG1 } from '../../public/icon/质谱仪-thermo scientific/DFS Magnetic Sector GC-HRMS.svg';
 import { ReactComponent as SVG2 } from '../../public/icon/质谱仪-thermo scientific/HRAM GC-MS.svg';
-import { ReactComponent as SVG3 } from '../../public/icon/质谱仪-thermo scientific/ISQ EC.svg';
-import { ReactComponent as SVG4 } from '../../public/icon/质谱仪-thermo scientific/ISQ EM.svg';
-import { ReactComponent as SVG5 } from '../../public/icon/质谱仪-thermo scientific/ISQ™ 7000 单四极杆 GC-MS.svg';
-import { ReactComponent as SVG6 } from '../../public/icon/质谱仪-thermo scientific/ISQ™ 7610 单四极杆 GC-MS.svg';
-import { ReactComponent as SVG7 } from '../../public/icon/质谱仪-thermo scientific/LTQ XL.svg';
+import { ReactComponent as SVG3 } from '../../public/icon/质谱仪-thermo scientific/ISQ™ EC Single Quadrupole MS.svg';
+import { ReactComponent as SVG4 } from '../../public/icon/质谱仪-thermo scientific/ISQ™ EM Single Quadrupole MS.svg';
+import { ReactComponent as SVG5 } from '../../public/icon/质谱仪-thermo scientific/ISQ 7000 single quadrupole GC-MS.svg';
+import { ReactComponent as SVG6 } from '../../public/icon/质谱仪-thermo scientific/ISQ 7610 single quadrupole GC-MS.svg';
+import { ReactComponent as SVG7 } from '../../public/icon/质谱仪-thermo scientific/LTQ XL™ Linear Ion Trap MS.svg';
 import { ReactComponent as SVG8 } from '../../public/icon/质谱仪-thermo scientific/Orbitrap Ascend Tribrid.svg';
 import { ReactComponent as SVG9 } from '../../public/icon/质谱仪-thermo scientific/Orbitrap Astral.svg';
-import { ReactComponent as SVG10 } from '../../public/icon/质谱仪-thermo scientific/Orbitrap Eclipse Tribrid.svg';
-import { ReactComponent as SVG11} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris 120.svg';
-import { ReactComponent as SVG12} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris 240.svg';
-import { ReactComponent as SVG13} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris 480.svg';
+import { ReactComponent as SVG10 } from '../../public/icon/质谱仪-thermo scientific/Orbitrap Eclipse™ Tribrid™.svg';
+import { ReactComponent as SVG11} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris™ 120.svg';
+import { ReactComponent as SVG12} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris™ 240.svg';
+import { ReactComponent as SVG13} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris™ 480.svg';
 import { ReactComponent as SVG14} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Exploris MX.svg';
-import { ReactComponent as SVG15} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Fusion Lumos Tribrid.svg';
-import { ReactComponent as SVG16} from '../../public/icon/质谱仪-thermo scientific/Orbitrap ID-X Tribrid.svg';
-import { ReactComponent as SVG17} from '../../public/icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC 240.svg';
-import { ReactComponent as SVG18} from '../../public/icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC.svg';
-import { ReactComponent as SVG19} from '../../public/icon/质谱仪-thermo scientific/Q Exactive.svg';
-import { ReactComponent as SVG20} from '../../public/icon/质谱仪-thermo scientific/TSQ 9610 QQQ Orbitrap™ GC-MS,MS.svg';
-import { ReactComponent as SVG21} from '../../public/icon/质谱仪-thermo scientific/TSQ Altis Plus.svg';
-import { ReactComponent as SVG22} from '../../public/icon/质谱仪-thermo scientific/TSQ Fortis Plus.svg';
-import { ReactComponent as SVG23} from '../../public/icon/质谱仪-thermo scientific/TSQ Quantis Plus.svg';
-import { ReactComponent as SVG24} from '../../public/icon/质谱仪-thermo scientific/TSQ Quantis.svg';
-import { ReactComponent as SVG25} from '../../public/icon/质谱仪-sciex/3500,4500,6500+.svg';
+import { ReactComponent as SVG15} from '../../public/icon/质谱仪-thermo scientific/Orbitrap Fusion™ Lumos™ Tribrid™.svg';
+import { ReactComponent as SVG16} from '../../public/icon/质谱仪-thermo scientific/Orbitrap™ IQ-X™ Tribrid™.svg';
+import { ReactComponent as SVG17} from '../../public/icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC 240 MS.svg';
+import { ReactComponent as SVG18} from '../../public/icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC-MS.svg';
+import { ReactComponent as SVG19} from '../../public/icon/质谱仪-thermo scientific/Q Exactive™ UHMR Hybrid Quadrupole Orbitrap™ MS.svg';
+import { ReactComponent as SVG20} from '../../public/icon/质谱仪-thermo scientific/TSQ 9610 Triple Quadrupole GC-MS.svg';
+import { ReactComponent as SVG21} from '../../public/icon/质谱仪-thermo scientific/TSQ Altis™ Plus Triple Quadrupole MS.svg';
+import { ReactComponent as SVG22} from '../../public/icon/质谱仪-thermo scientific/TSQ Fortis™ Plus Triple Quadrupole MS.svg';
+import { ReactComponent as SVG23} from '../../public/icon/质谱仪-thermo scientific/TSQ Quantis™ Triple Quadrupole MS.svg';
+import { ReactComponent as SVG24} from '../../public/icon/质谱仪-thermo scientific/TSQ Quantis™ Plus Triple Quadrupole MS.svg';
+import { ReactComponent as SVG25} from '../../public/icon/质谱仪-sciex/Triple Quad 350045006500+.svg';
 import { ReactComponent as SVG26} from '../../public/icon/质谱仪-sciex/QTRAP 4500.svg';
 import { ReactComponent as SVG27} from '../../public/icon/质谱仪-sciex/QTRAP 6500+.svg';
-import { ReactComponent as SVG28} from '../../public/icon/质谱仪-sciex/Triple Quad 5500+ system-QTRAP ready.svg';
-import { ReactComponent as SVG29} from '../../public/icon/质谱仪-sciex/Triple Quad 7500 system-QTRAP ready.svg';
-import { ReactComponent as SVG30} from '../../public/icon/质谱仪-sciex/TripleTOF 5600.svg';
-import { ReactComponent as SVG31} from '../../public/icon/质谱仪-sciex/TripleTOF 6600+.svg';
-import { ReactComponent as SVG32} from '../../public/icon/质谱仪-sciex/X500.svg';
+import { ReactComponent as SVG28} from '../../public/icon/质谱仪-sciex/Triple Quad 5500+.svg';
+import { ReactComponent as SVG29} from '../../public/icon/质谱仪-sciex/Triple Quad 7500.svg';
+import { ReactComponent as SVG30} from '../../public/icon/质谱仪-sciex/TripleTOF™ 5600+.svg';
+import { ReactComponent as SVG31} from '../../public/icon/质谱仪-sciex/TripleTOF™ 6600.svg';
+import { ReactComponent as SVG32} from '../../public/icon/质谱仪-sciex/X500 QTOF.svg';
 import { ReactComponent as SVG33} from '../../public/icon/质谱仪-sciex/Zeno TOF 7600.svg';
 import { ReactComponent as SVG34} from '../../public/icon/质谱仪-bruker/autoflex®maX.svg';
 import { ReactComponent as SVG35} from '../../public/icon/质谱仪-bruker/compact.svg';
-import { ReactComponent as SVG36} from '../../public/icon/质谱仪-bruker/EVOQ GC-TQ.svg';
-import { ReactComponent as SVG37} from '../../public/icon/质谱仪-bruker/EVOQ LC-TQ.svg';
+import { ReactComponent as SVG36} from '../../public/icon/质谱仪-bruker/EVOQ®GC-TQ.svg';
+import { ReactComponent as SVG37} from '../../public/icon/质谱仪-bruker/EVOQ®LC-TQ.svg';
 import { ReactComponent as SVG38} from '../../public/icon/质谱仪-bruker/impactII,TargetScreener HR.svg';
 import { ReactComponent as SVG39} from '../../public/icon/质谱仪-bruker/maXis II.svg';
 import { ReactComponent as SVG40} from '../../public/icon/质谱仪-bruker/microflex®.svg';
@@ -44,29 +44,29 @@ import { ReactComponent as SVG42} from '../../public/icon/质谱仪-bruker/scima
 import { ReactComponent as SVG43} from '../../public/icon/质谱仪-bruker/solarix.svg';
 import { ReactComponent as SVG44} from '../../public/icon/质谱仪-bruker/timsTOF fleX,timsTOF fleX MALDI-2.svg';
 import { ReactComponent as SVG45} from '../../public/icon/质谱仪-bruker/timsTOF HT,timsTOF Pro 2.svg';
-import { ReactComponent as SVG46} from '../../public/icon/质谱仪-bruker/timsTOF MALDI PharmaPulse® (MPP).svg';
+import { ReactComponent as SVG46} from '../../public/icon/质谱仪-bruker/rapifleX®MALDI PharmaPulse®(MPP).svg';
 import { ReactComponent as SVG47} from '../../public/icon/质谱仪-bruker/timsTOF SCP.svg';
 import { ReactComponent as SVG48} from '../../public/icon/质谱仪-bruker/timsTOF Ultra.svg';
 import { ReactComponent as SVG49} from '../../public/icon/质谱仪-bruker/ultrafleXtreme.svg';
-import { ReactComponent as SVG50} from '../../public/icon/质谱仪-agilent/5977,7000E,7010C.svg';
-import { ReactComponent as SVG51} from '../../public/icon/质谱仪-agilent/6475.svg';
-import { ReactComponent as SVG52} from '../../public/icon/质谱仪-agilent/6495.svg';
-import { ReactComponent as SVG53} from '../../public/icon/质谱仪-agilent/6545,6546,6530.svg';
-import { ReactComponent as SVG54} from '../../public/icon/质谱仪-agilent/6560离子淌度.svg';
-import { ReactComponent as SVG55} from '../../public/icon/质谱仪-agilent/7250.svg';
-import { ReactComponent as SVG56} from '../../public/icon/质谱仪-agilent/LC,MSD iQ.svg';
-import { ReactComponent as SVG57} from '../../public/icon/质谱仪-agilent/Revident.svg';
-import { ReactComponent as SVG58} from '../../public/icon/质谱仪-agilent/TOF.svg';
-import { ReactComponent as SVG59} from '../../public/icon/质谱仪-agilent/Ultivo.svg';
-import { ReactComponent as SVG60} from '../../public/icon/质谱仪-shimadzu/LCMS-90XX.svg';
+import { ReactComponent as SVG50} from '../../public/icon/质谱仪-agilent/5977C GCMSD  7000E Triple Quadrupole GCMS  7010C Triple Quadrupole GCMS.svg';
+import { ReactComponent as SVG51} from '../../public/icon/质谱仪-agilent/6475 Triple Quadrupole.svg';
+import { ReactComponent as SVG52} from '../../public/icon/质谱仪-agilent/NEW 6495D Triple Quadrupole.svg';
+import { ReactComponent as SVG53} from '../../public/icon/质谱仪-agilent/6545XT AdvanceBio Q-TOF6546 Q-TOF 6530 Q-TOF.svg';
+import { ReactComponent as SVG54} from '../../public/icon/质谱仪-agilent/6560 Ion Mobility Q-TOF.svg';
+import { ReactComponent as SVG55} from '../../public/icon/质谱仪-agilent/7250 GCQ-TOF.svg';
+import { ReactComponent as SVG56} from '../../public/icon/质谱仪-agilent/LCMSD iQ.svg';
+import { ReactComponent as SVG57} from '../../public/icon/质谱仪-agilent/Revident Q-TOF.svg';
+import { ReactComponent as SVG58} from '../../public/icon/质谱仪-agilent/6230B Time of Flight (TOF).svg';
+import { ReactComponent as SVG59} from '../../public/icon/质谱仪-agilent/Ultivo Triple Quadrupole.svg';
+import { ReactComponent as SVG60} from '../../public/icon/质谱仪-shimadzu/LCMS-9050LCMS-9030.svg';
 import { ReactComponent as SVG61} from '../../public/icon/质谱仪-shimadzu/LCMS-2020.svg';
 import { ReactComponent as SVG62} from '../../public/icon/质谱仪-shimadzu/LCMS-2050.svg';
 import { ReactComponent as SVG63} from '../../public/icon/质谱仪-shimadzu/LCMS-8040.svg';
 import { ReactComponent as SVG64} from '../../public/icon/质谱仪-shimadzu/LCMS-8045.svg';
 import { ReactComponent as SVG65} from '../../public/icon/质谱仪-shimadzu/LCMS-8050.svg';
-import { ReactComponent as SVG66} from '../../public/icon/质谱仪-shimadzu/LCMS-8060,8060-NX.svg';
+import { ReactComponent as SVG66} from '../../public/icon/质谱仪-shimadzu/LCMS-8060NXLCMS-8060NX.svg';
 import { ReactComponent as SVG67} from '../../public/icon/质谱仪-shimadzu/LCMS-IT-TOF.svg';
-import { ReactComponent as SVG68} from '../../public/icon/质谱仪-shimadzu/NX.svg';
+import { ReactComponent as SVG68} from '../../public/icon/质谱仪-shimadzu/GCMS-TQ8050 NXGCMS-TQ8040 NXGCMS-QP2020 NX.svg';
 import { ReactComponent as SVG69} from '../../public/icon/质谱仪-waters/ACQUITY QDa.svg';
 import { ReactComponent as SVG70} from '../../public/icon/质谱仪-waters/ACQUITY RDa.svg';
 import { ReactComponent as SVG71} from '../../public/icon/质谱仪-waters/BioAccord.svg';
@@ -78,7 +78,7 @@ import { ReactComponent as SVG76} from '../../public/icon/质谱仪-waters/SYNAP
 import { ReactComponent as SVG77} from '../../public/icon/质谱仪-waters/Xevo G2-XS QTof.svg';
 import { ReactComponent as SVG78} from '../../public/icon/质谱仪-waters/Xevo G3 QTof.svg';
 import { ReactComponent as SVG79} from '../../public/icon/质谱仪-waters/Xevo TQ Absolute,Xevo TQ-XS,Xevo TQ-S.svg';
-import { ReactComponent as SVG80} from '../../public/icon/质谱仪-waters/Xevo TQ-GC.svg';
+import { ReactComponent as SVG80} from '../../public/icon/质谱仪-waters/Xevo TQ-GC MS.svg';
 import { ReactComponent as SVG81} from '../../public/icon/质谱仪-waters/Xevo TQ-S micro,Xevo TQ-S cronos,Xevo TQD.svg';
 import { ReactComponent as SVG82} from '../../public/icon/部件-质量分析器/飞行时间_1.svg';
 import { ReactComponent as SVG83} from '../../public/icon/部件-质量分析器/飞行时间_2.svg';
@@ -89,15 +89,15 @@ import { ReactComponent as SVG87} from '../../public/icon/部件-质量分析器
 import { ReactComponent as SVG88} from '../../public/icon/部件-质量分析器/四级杆_1.svg';
 import { ReactComponent as SVG89} from '../../public/icon/部件-质量分析器/四级杆_2.svg';
 import { ReactComponent as SVG90} from '../../public/icon/液相色谱仪-thermo scientific/液相色谱仪.svg';
-import { ReactComponent as SVG91} from '../../public/icon/液相色谱仪-thermo scientific/EASY-nLC 1000.svg';
+import { ReactComponent as SVG91} from '../../public/icon/液相色谱仪-thermo scientific/EASY-nLC™ 1200.svg';
 import { ReactComponent as SVG92} from '../../public/icon/液相色谱仪-thermo scientific/UltiMate™ 3000.svg';
-import { ReactComponent as SVG93} from '../../public/icon/液相色谱仪-thermo scientific/Vanquish(不带屏幕).svg';
-import { ReactComponent as SVG94} from '../../public/icon/液相色谱仪-thermo scientific/Vanquish(带屏幕).svg';
-import { ReactComponent as SVG95} from '../../public/icon/液相色谱仪-sciex/ExionLC™.svg';
-import { ReactComponent as SVG96} from '../../public/icon/液相色谱仪-sciex/Microflow LC.svg';
-import { ReactComponent as SVG97} from '../../public/icon/液相色谱仪-sciex/Nano LC-MS —— anoLC 400系统.svg';
-import { ReactComponent as SVG98} from '../../public/icon/液相色谱仪-sciex/Nano LC-MS —— cHiPLC™ 系统.svg';
-import { ReactComponent as SVG99} from '../../public/icon/液相色谱仪-bruker/Elute LC.svg';
+import { ReactComponent as SVG93} from '../../public/icon/液相色谱仪-thermo scientific/Vanquish™_1.svg';
+import { ReactComponent as SVG94} from '../../public/icon/液相色谱仪-thermo scientific/Vanquish™_2.svg';
+import { ReactComponent as SVG95} from '../../public/icon/液相色谱仪-sciex/ExionLC.svg';
+import { ReactComponent as SVG96} from '../../public/icon/液相色谱仪-sciex/M5 MicroLC.svg';
+import { ReactComponent as SVG97} from '../../public/icon/液相色谱仪-sciex/NanoLC 400.svg';
+import { ReactComponent as SVG98} from '../../public/icon/液相色谱仪-sciex/cHiPLC.svg';
+import { ReactComponent as SVG99} from '../../public/icon/液相色谱仪-bruker/Elute LC Series.svg';
 import { ReactComponent as SVG100} from '../../public/icon/液相色谱仪-bruker/nanoElute® 2.svg';
 import { ReactComponent as SVG101} from '../../public/icon/液相色谱仪-agilent/1220 Infinity II.svg';
 import { ReactComponent as SVG102} from '../../public/icon/液相色谱仪-agilent/1260 Infinity II Prime.svg';
@@ -106,7 +106,7 @@ import { ReactComponent as SVG104} from '../../public/icon/液相色谱仪-agile
 import { ReactComponent as SVG105} from '../../public/icon/液相色谱仪-shimadzu/i-Series.svg';
 import { ReactComponent as SVG106} from '../../public/icon/液相色谱仪-shimadzu/Nexera LC-40.svg';
 import { ReactComponent as SVG107} from '../../public/icon/液相色谱仪-shimadzu/Prominence Plus.svg';
-import { ReactComponent as SVG108} from '../../public/icon/液相色谱仪-waters/ACQUITY UPLC H-ClassPLUS.svg';
+import { ReactComponent as SVG108} from '../../public/icon/液相色谱仪-waters/ACQUITY UPLC H-Class PLUS.svg';
 import { ReactComponent as SVG109} from '../../public/icon/液相色谱仪-waters/Alliance HPLC.svg';
 import { ReactComponent as SVG110} from '../../public/icon/液相色谱仪-waters/Alliance iS HPLC System.svg';
 import { ReactComponent as SVG111} from '../../public/icon/液相色谱仪-waters/Arc HPLC.svg';
@@ -251,7 +251,7 @@ const iconList = [
   {
     id: '1',
     component: SVG1,
-    path: './icon/质谱仪-thermo scientific/DFS GC-HRMS.svg',
+    path: './icon/质谱仪-thermo scientific/DFS Magnetic Sector GC-HRMS.svg',
     name: 'DFS Magnetic Sector GC-HRMS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
@@ -265,33 +265,33 @@ const iconList = [
   {
     id: '3',
     component: SVG3,
-    path: './icon/质谱仪-thermo scientific/ISQ EC.svg',
+    path: './icon/质谱仪-thermo scientific/ISQ™ EC Single Quadrupole MS.svg',
     name: 'ISQ™ EC Single Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
   {
     id: '4',
     component: SVG4,
-    path: './icon/质谱仪-thermo scientific/ISQ EM.svg',
+    path: './icon/质谱仪-thermo scientific/ISQ™ EM Single Quadrupole MS.svg',
     name: 'ISQ™ EM Single Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
   {
     id: '5',
     component: SVG5,
-    path: './icon/质谱仪-thermo scientific/ISQ™ 7000 单四极杆 GC-MS.svg',
+    path: './icon/质谱仪-thermo scientific/ISQ 7000 single quadrupole GC-MS.svg',
     name: 'ISQ 7000 single quadrupole GC-MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '6',
     component: SVG6,
-    path: './icon/质谱仪-thermo scientific/ISQ™ 7610 单四极杆 GC-MS.svg',
+    path: './icon/质谱仪-thermo scientific/ISQ 7610 single quadrupole GC-MS.svg',
     name: ' ISQ 7610 single quadrupole GC-MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '7',
     component: SVG7,
-    path: './icon/质谱仪-thermo scientific/LTQ XL.svg',
+    path: './icon/质谱仪-thermo scientific/LTQ XL™ Linear Ion Trap MS.svg',
     name: 'LTQ XL™ Linear Ion Trap MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
@@ -309,27 +309,27 @@ const iconList = [
   },  {
     id: '10',
     component: SVG10,
-    path: './icon/质谱仪-thermo scientific/Orbitrap Eclipse Tribrid.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap Eclipse™ Tribrid™.svg',
     name: 'Orbitrap Eclipse™ Tribrid™',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
   {
     id: '11',
     component: SVG11,
-    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris 120.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris™ 120.svg',
     name: 'Orbitrap Exploris™ 120',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },
   {
     id: '12',
     component: SVG12,
-    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris 240.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris™ 240.svg',
     name: 'Orbitrap Exploris™ 240',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '13',
     component: SVG13,
-    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris 480.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap Exploris™ 480.svg',
     name: 'Orbitrap Exploris™ 480',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
@@ -341,67 +341,67 @@ const iconList = [
   },  {
     id: '15',
     component: SVG15,
-    path: './icon/质谱仪-thermo scientific/Orbitrap Fusion Lumos Tribrid.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap Fusion™ Lumos™ Tribrid™.svg',
     name: 'Orbitrap Fusion™ Lumos™ Tribrid™',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '16',
     component: SVG16,
-    path: './icon/质谱仪-thermo scientific/Orbitrap ID-X Tribrid.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap™ IQ-X™ Tribrid™.svg',
     name: 'Orbitrap™ IQ-X™ Tribrid™',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '17',
     component: SVG17,
-    path: './icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC 240.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC 240 MS.svg',
     name: 'Orbitrap™ Exploris™ GC 240 MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '18',
     component: SVG18,
-    path: './icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC.svg',
+    path: './icon/质谱仪-thermo scientific/Orbitrap™ Exploris™ GC-MS.svg',
     name: 'Orbitrap™ Exploris™ GC-MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '19',
     component: SVG19,
-    path: './icon/质谱仪-thermo scientific/Q Exactive.svg',
+    path: './icon/质谱仪-thermo scientific/Q Exactive™ UHMR Hybrid Quadrupole Orbitrap™ MS.svg',
     name: 'Q Exactive™ UHMR Hybrid Quadrupole Orbitrap™ MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '20',
     component: SVG20,
-    path: './icon/质谱仪-thermo scientific/TSQ 9610 QQQ Orbitrap™ GC-MS,MS.svg',
+    path: './icon/质谱仪-thermo scientific/TSQ 9610 Triple Quadrupole GC-MS.svg',
     name: 'TSQ 9610 Triple Quadrupole GC-MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '21',
     component: SVG21,
-    path: './icon/质谱仪-thermo scientific/TSQ Altis Plus.svg',
+    path: './icon/质谱仪-thermo scientific/TSQ Altis™ Plus Triple Quadrupole MS.svg',
     name: 'TSQ Altis™ Plus Triple Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '22',
     component: SVG22,
-    path: './icon/质谱仪-thermo scientific/TSQ Fortis Plus.svg',
+    path: './icon/质谱仪-thermo scientific/TSQ Fortis™ Plus Triple Quadrupole MS.svg',
     name: 'TSQ Fortis™ Plus Triple Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '23',
     component: SVG23,
-    path: './icon/质谱仪-thermo scientific/TSQ Quantis Plus.svg',
+    path: './icon/质谱仪-thermo scientific/TSQ Quantis™ Triple Quadrupole MS.svg',
     name: 'TSQ Quantis™ Triple Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   },  {
     id: '24',
     component: SVG24,
-    path: './icon/质谱仪-thermo scientific/TSQ Quantis.svg',
+    path: './icon/质谱仪-thermo scientific/TSQ Quantis™ Plus Triple Quadrupole MS.svg',
     name: 'TSQ Quantis™ Plus Triple Quadrupole MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-Thermo Scientific'}),
   }, {
     id: '25',
     component: SVG25,
-    path: './icon/质谱仪-sciex/3500,4500,6500+.svg',
+    path: './icon/质谱仪-sciex/Triple Quad 350045006500+.svg',
     name: 'Triple Quad 3500/4500/6500+',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
@@ -419,31 +419,31 @@ const iconList = [
   },  {
     id: '28',
     component: SVG28,
-    path: './icon/质谱仪-sciex/Quad 5500+ system-QTRAP ready.svg',
+    path: './icon/质谱仪-sciex/Triple Quad 5500+.svg',
     name: 'Triple Quad 5500+',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
     id: '29',
     component: SVG29,
-    path: './icon/质谱仪-sciex/Triple Quad 7500 system-QTRAP ready.svg',
+    path: './icon/质谱仪-sciex/Triple Quad 7500.svg',
     name: 'Triple Quad 7500',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
     id: '30',
     component: SVG30,
-    path: './icon/质谱仪-sciex/TripleTOF 5600.svg',
+    path: './icon/质谱仪-sciex/TripleTOF™ 5600+.svg',
     name: 'TripleTOF™ 5600+',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
     id: '31',
     component: SVG31,
-    path: './icon/质谱仪-sciex/TripleTOF 6600+.svg',
+    path: './icon/质谱仪-sciex/TripleTOF™ 6600.svg',
     name: 'TripleTOF™ 6600',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
     id: '32',
     component: SVG32,
-    path: './icon/质谱仪-sciex/X500.svg',
+    path: './icon/质谱仪-sciex/X500 QTOF.svg',
     name: 'X500 QTOF',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-sciex'}),
   },  {
@@ -467,13 +467,13 @@ const iconList = [
   },   {
     id: '36',
     component: SVG36,
-    path: './icon/质谱仪-bruker/EVOQ GC-TQ.svg',
+    path: './icon/质谱仪-bruker/EVOQ®GC-TQ.svg',
     name: 'EVOQ®GC-TQ',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-bruker'}),
   },   {
     id: '37',
     component: SVG37,
-    path: './icon/质谱仪-bruker/EVOQ LC-TQ.svg',
+    path: './icon/质谱仪-bruker/EVOQ®LC-TQ.svg',
     name: 'EVOQ®LC-TQ',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-bruker'}),
   },   {
@@ -527,8 +527,8 @@ const iconList = [
   },   {
     id: '46',
     component: SVG46,
-    path: './icon/质谱仪-bruker/timsTOF MALDI PharmaPulse® (MPP).svg',
-    name: 'timsTOF MALDI PharmaPulse® (MPP)',
+    path: './icon/质谱仪-bruker/rapifleX®MALDI PharmaPulse®(MPP).svg',
+    name: 'rapifleX®MALDI PharmaPulse®(MPP)',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-bruker'}),
   },   {
     id: '47',
@@ -551,67 +551,67 @@ const iconList = [
   },   {
     id: '50',
     component: SVG50,
-    path: './icon/质谱仪-agilent/5977,7000E,7010C.svg',
+    path: './icon/质谱仪-agilent/5977C GCMSD  7000E Triple Quadrupole GCMS  7010C Triple Quadrupole GCMS.svg',
     name: '5977C GC/MSD / 7000E Triple Quadrupole GC/MS / 7010C Triple Quadrupole GC/MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },   {
     id: '51',
     component: SVG51,
-    path: './icon/质谱仪-agilent/6475.svg',
+    path: './icon/质谱仪-agilent/6475 Triple Quadrupole.svg',
     name: '6475 Triple Quadrupole',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '52',
     component: SVG52,
-    path: './icon/质谱仪-agilent/6495.svg',
+    path: './icon/质谱仪-agilent/NEW 6495D Triple Quadrupole.svg',
     name: 'NEW 6495D Triple Quadrupole',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '53',
     component: SVG53,
-    path: './icon/质谱仪-agilent/6545,6546,6530.svg',
+    path: './icon/质谱仪-agilent/6545XT AdvanceBio Q-TOF6546 Q-TOF 6530 Q-TOF.svg',
     name: '6545XT AdvanceBio Q-TOF/6546 Q-TOF/ 6530 Q-TOF',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '54',
     component: SVG54,
-    path: './icon/质谱仪-agilent/6560离子淌度.svg',
+    path: './icon/质谱仪-agilent/6560 Ion Mobility Q-TOF.svg',
     name: '6560 Ion Mobility Q-TOF',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '55',
     component: SVG55,
-    path: './icon/质谱仪-agilent/7250.svg',
+    path: './icon/质谱仪-agilent/7250 GCQ-TOF.svg',
     name: '7250 GC/Q-TOF',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '56',
     component: SVG56,
-    path: './icon/质谱仪-agilent/LC,MSD iQ.svg',
+    path: './icon/质谱仪-agilent/LCMSD iQ.svg',
     name: 'LC/MSD iQ',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '57',
     component: SVG57,
-    path: './icon/质谱仪-agilent/Revident.svg',
+    path: './icon/质谱仪-agilent/Revident Q-TOF.svg',
     name: 'Revident Q-TOF',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '58',
     component: SVG58,
-    path: './icon/质谱仪-agilent/TOF.svg',
+    path: './icon/质谱仪-agilent/6230B Time of Flight (TOF).svg',
     name: '6230B Time of Flight (TOF)',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },    {
     id: '59',
     component: SVG59,
-    path: './icon/质谱仪-agilent/Ultivo.svg',
+    path: './icon/质谱仪-agilent/Ultivo Triple Quadrupole.svg',
     name: 'Ultivo Triple Quadrupole',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-agilent'}),
   },  {
     id: '60',
     component: SVG60,
-    path: './icon/质谱仪-shimadzu/LCMS-90XX.svg',
+    path: './icon/质谱仪-shimadzu/LCMS-9050LCMS-9030.svg',
     name: 'LCMS-9050/LCMS-9030',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-shimadzu'}),
   }, {
@@ -647,7 +647,7 @@ const iconList = [
   }, {
     id: '66',
     component: SVG66,
-    path: './icon/质谱仪-shimadzu/LCMS-8060,8060-NX.svg',
+    path: './icon/质谱仪-shimadzu/LCMS-8060NXLCMS-8060NX.svg',
     name: 'LCMS-8060NX/LCMS-8060NX',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-shimadzu'}),
   }, {
@@ -659,7 +659,7 @@ const iconList = [
   }, {
     id: '68',
     component: SVG68,
-    path: './icon/质谱仪-shimadzu/NX.svg',
+    path: './icon/质谱仪-shimadzu/GCMS-TQ8050 NXGCMS-TQ8040 NXGCMS-QP2020 NX.svg',
     name: 'GCMS-TQ8050 NX/GCMS-TQ8040 NX/GCMS-QP2020 NX',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-shimadzu'}),
   }, {
@@ -731,7 +731,7 @@ const iconList = [
   }, {
     id: '80',
     component: SVG80,
-    path: './icon/质谱仪-waters/Xevo TQ-GC.svg',
+    path: './icon/质谱仪-waters/Xevo TQ-GC MS.svg',
     name: 'Xevo TQ-GC MS',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-waters'}),
   },{
@@ -805,7 +805,7 @@ const iconList = [
   },{
     id: '91',
     component: SVG91,
-    path: './icon/液相色谱仪-thermo scientific/EASY-nLC 1000.svg',
+    path: './icon/液相色谱仪-thermo scientific/EASY-nLC™ 1200.svg',
     name: 'EASY-nLC™ 1200',
     type: intl.formatMessage({ id:'Liquid chromatograph-Thermo Scientific'}),
   },{
@@ -817,43 +817,43 @@ const iconList = [
   },{
     id: '93',
     component: SVG93,
-    path: './icon/液相色谱仪-thermo scientific/Vanquish(不带屏幕).svg',
+    path: './icon/液相色谱仪-thermo scientific/Vanquish™_1.svg',
     name: 'Vanquish™_1',
     type: intl.formatMessage({ id:'Liquid chromatograph-Thermo Scientific'}),
   },{
     id: '94',
     component: SVG94,
-    path: './icon/液相色谱仪-thermo scientific/Vanquish(带屏幕).svg',
+    path: './icon/液相色谱仪-thermo scientific/Vanquish™_2.svg',
     name: 'Vanquish™_2',
     type: intl.formatMessage({ id:'Liquid chromatograph-Thermo Scientific'}),
   },{
     id: '95',
     component: SVG95,
-    path: './icon/液相色谱仪-sciex/ExionLC™.svg',
+    path: './icon/液相色谱仪-sciex/ExionLC.svg',
     name: 'ExionLC',
     type: intl.formatMessage({ id:'Liquid chromatograph-sciex'}),
   },{
     id: '96',
     component: SVG96,
-    path: './icon/液相色谱仪-sciex/Microflow LC.svg',
-    name: 'Microflow LC',
+    path: './icon/液相色谱仪-sciex/M5 MicroLC.svg',
+    name: 'M5 MicroLC',
     type: intl.formatMessage({ id:'Liquid chromatograph-sciex'}),
   },{
     id: '97',
     component: SVG97,
-    path: './icon/液相色谱仪-sciex/Nano LC-MS —— anoLC 400系统.svg',
+    path: './icon/液相色谱仪-sciex/NanoLC 400.svg',
     name: 'NanoLC 400',
     type: intl.formatMessage({ id:'Liquid chromatograph-sciex'}),
   },{
     id: '98',
     component: SVG98,
-    path: './icon/液相色谱仪-sciex/Nano LC-MS —— cHiPLC™ 系统.svg',
+    path: './icon/液相色谱仪-sciex/cHiPLC.svg',
     name: 'cHiPLC',
     type: intl.formatMessage({ id:'Liquid chromatograph-sciex'}),
   },{
     id: '99',
     component: SVG99,
-    path: './icon/液相色谱仪-bruker/Elute LC.svg',
+    path: './icon/液相色谱仪-bruker/Elute LC Series.svg',
     name: 'Elute LC Series',
     type: intl.formatMessage({ id:'Liquid chromatograph-bruker'}),
   },{
@@ -907,7 +907,7 @@ const iconList = [
   },{
     id: '108',
     component: SVG108,
-    path: './icon/液相色谱仪-waters/ACQUITY UPLC H-ClassPLUS.svg',
+    path: './icon/液相色谱仪-waters/ACQUITY UPLC H-Class PLUS.svg',
     name: 'ACQUITY UPLC H-Class PLUS',
     type: intl.formatMessage({ id:'Liquid chromatograph-waters'}),
   },{
@@ -1551,7 +1551,7 @@ const iconList = [
     component: SVG195,
     path: './icon/样本类型/生物/动物/羊.svg',
     name: intl.formatMessage({ id: 'sheep'}),
-    recommend:'#DEE0E7',
+    recommend:'#DEDFE7',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
   },{
     id: '196',
@@ -1596,6 +1596,7 @@ const iconList = [
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
 
   },{
+    id: '201',
     component: SVG201,
     path: './icon/样本类型/生物/动物/青蛙.svg',
     name: intl.formatMessage({ id: 'frog'}),
