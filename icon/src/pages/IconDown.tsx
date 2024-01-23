@@ -1600,7 +1600,6 @@ const iconList = [
     component: SVG201,
     path: './icon/样本类型/生物/动物/青蛙.svg',
     name: intl.formatMessage({ id: 'frog'}),
-    recommend:'#A5E736',
     type: intl.formatMessage({ id: 'Sample type-Biological-Animal'}),
   },{
     id: '202',
