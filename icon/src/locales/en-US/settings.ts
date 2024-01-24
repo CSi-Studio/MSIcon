@@ -264,5 +264,6 @@ export default {
   'Life Sciences and Medicine':'Life Sciences and Medicine',
   'food':'Food',
   'judicial':'Judicial',
-  'Instrument development':'Instrument development'
+  'Instrument development':'Instrument development',
+  'Choose':'Choose download file size: Custom size'
 };

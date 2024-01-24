@@ -1,6 +1,6 @@
 import { ClearOutlined, DeleteOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Link } from '@umijs/renderer-react';
-import { Badge, Drawer } from 'antd';
+import { Badge, Drawer, Input } from 'antd';
 import { useEffect, useState } from 'react';
 import styles from './About.less';
 import iconList from './IconDown';
@@ -51,7 +51,8 @@ const About = () => {
     setShop(filter);
     localStorage.setItem('num', JSON.stringify(filter));
   };
-  //下载 SVG 文件
+  const[width,setWidth]=useState(200)
+  // 下载 SVG 文件
   const handleDownload = (id: string) => {
     const selectedIcon = iconList.find((icon) => icon.id === id); // 根据id查找对应的icon对象
     if (!selectedIcon) {
@@ -66,6 +67,11 @@ const About = () => {
         // 解析 SVG 文件
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgData, 'image/svg+xml');
+  
+      // 设置 SVG 元素的大小
+      const svg = doc.querySelector('svg');
+      svg.setAttribute('width', `${width}px`);
+      svg.setAttribute('height', `${width}px`);
 
         // 创建 SVG 文件下载链接
         const serializer = new XMLSerializer();
@@ -81,11 +87,74 @@ const About = () => {
         URL.revokeObjectURL(url);
       });
   };
+//下载png文件
+ const handleDownload1 = (id: string) => {
+    const selectedIcon = iconList.find((icon) => icon.id === id); // 根据id查找对应的icon对象
+    if (!selectedIcon) {
+      console.error('Icon not found'); // 如果没有找到对应的icon，则输出错误信息
+      return;
+    }
+    const { path, name } = selectedIcon; // 获取SVG文件路径和名称
+    // 获取 SVG 文件
+    fetch(path)
+      .then((response) => response.text())
+      .then((svgData) => {
+        // 解析 SVG 文件
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgData, 'image/svg+xml');
+
+         // 创建 SVG 文件下载链接
+      const serializer = new XMLSerializer();
+      const modifiedSvgData = serializer.serializeToString(doc);
+      const blob = new Blob([modifiedSvgData], { type: 'image/svg+xml' });
+      const svgUrl = URL.createObjectURL(blob);
+
+      // 创建一个隐藏的canvas元素
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.width = width
+      canvas.height = width
+
+      // 在canvas上绘制SVG图像
+      const image = new Image();
+      image.src = svgUrl;
+      image.onload = () => {
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+        // 将canvas转换为PNG数据URL
+        const pngDataUrl = canvas.toDataURL('image/png');
+
+        // 创建一个隐藏的a标签并模拟点击下载
+        const a = document.createElement('a');
+        a.href = pngDataUrl;
+        a.download = `${name}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        // 释放URL对象
+        URL.revokeObjectURL(svgUrl);
+      }
+      });
+  };
   const down = () => {
     shop.forEach((id) => {
       handleDownload(id);
     });
     localStorage.removeItem('num');
+    onClose()
+  };
+  const down1 = () => {
+    num.forEach((id) => {
+      handleDownload1(id);
+    });
+    localStorage.removeItem('num');
+    onClose()
+  };
+  const onChange3 = (event: any) => {
+    const value = event.target.value; // 获取输入框的值
+    console.log(value);
+    setWidth(value)
   };
   const onClose = () => {
     setOpen(false);
@@ -173,8 +242,13 @@ const About = () => {
         ) : (
           <p><FormattedMessage id={'Quickly'}/></p>
         )}
-        <div className={styles.down} onClick={() => down()}>
-        <FormattedMessage id={'download'}/>
+                <div style={{'position': 'absolute', 'bottom': '320px','left':'40px'}}><FormattedMessage id={'Choose'}/></div>
+        <div style={{fontSize:'16px','position': 'absolute', 'bottom': '280px','left':'40px'}}> <Input placeholder="200" style={{'width':'50px',height:'26px',marginLeft:'5px'}} onChange={onChange3}/><span style={{marginLeft:'5px',marginRight:'5px'}}>x</span>{width}</div>       
+        <div className={styles.down} onClick={() => down1()}>
+        <FormattedMessage id={'download'}/> png
+        </div>
+        <div className={styles.down1} onClick={() => down()}>
+        <FormattedMessage id={'download'}/> svg
         </div>
       </Drawer>
       <div className={styles.footer}>

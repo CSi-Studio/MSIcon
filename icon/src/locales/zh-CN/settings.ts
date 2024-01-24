@@ -259,5 +259,6 @@ export default {
   'Life Sciences and Medicine':'生命科学与医药',
   'food':'食物',
   'judicial':'司法',
-  'Instrument development':'仪器研发'
+  'Instrument development':'仪器研发',
+  'Choose':'选择下载文件大小：自定义大小',
 };
