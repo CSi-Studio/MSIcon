@@ -237,6 +237,10 @@ import { ReactComponent as SVG235} from '../../public/icon/常用实验仪器-�
 import { ReactComponent as SVG236} from '../../public/icon/常用实验仪器-其他/进样瓶_2.svg';
 import { ReactComponent as SVG237} from '../../public/icon/采集模式/PRM.svg';
 import { ReactComponent as SVG238} from '../../public/icon/采集模式/PRM_4D.svg';
+import { ReactComponent as SVG239} from '../../public/icon/质谱仪-清谱科技/Miniature Ms System.svg';
+import { ReactComponent as SVG240} from '../../public/icon/质谱仪-清谱科技/Miniature Ms System-开盖.svg';
+import { ReactComponent as SVG241} from '../../public/icon/质谱仪-清谱科技/Miniature Ms System-进样.svg';
+import { ReactComponent as SVG242} from '../../public/icon/质谱仪-清谱科技/进样盒.svg';
 import { getIntl } from '@umijs/max';
 const intl = getIntl();
 
@@ -740,7 +744,36 @@ const iconList = [
     path: './icon/质谱仪-waters/Xevo TQ-S micro,Xevo TQ-S cronos,Xevo TQD.svg',
     name: 'Xevo TQ-S micro/Xevo TQ-S cronos/Xevo TQD',
     type: intl.formatMessage({ id:'Mass spectrometer-Instrument-waters'}),
-  },{
+  },
+  {
+    id:'239',
+    component:SVG239,
+    path: './icon/质谱仪-清谱科技/Miniature Ms System.svg',
+    name:intl.formatMessage({ id:'Miniature Ms System'}),
+    type: intl.formatMessage({ id:'Mass spectrometer-Instrument-purspec'})
+  },
+  {
+    id:'240',
+    component:SVG240,
+    path: './icon/质谱仪-清谱科技/Miniature Ms System-开盖.svg',
+    name:intl.formatMessage({ id:'Miniature Ms System-Cover Opening'}),
+    type: intl.formatMessage({ id:'Mass spectrometer-Instrument-purspec'})
+  },
+  {
+    id:'241',
+    component:SVG241,
+    path: './icon/质谱仪-清谱科技/Miniature Ms System-进样.svg',
+    name:intl.formatMessage({ id:'Miniature Ms System-Injection'}),
+    type: intl.formatMessage({ id:'Mass spectrometer-Instrument-purspec'})
+  },
+  {
+    id:'242',
+    component:SVG242,
+    path: './icon/质谱仪-清谱科技/进样盒.svg',
+    name:intl.formatMessage({ id:'Injection box'}),
+    type: intl.formatMessage({ id:'Mass spectrometer-Instrument-purspec'})
+  },
+    {
     id: '82',
     component: SVG82,
     path: './icon/部件-质量分析器/飞行时间_1.svg',
@@ -889,7 +922,7 @@ const iconList = [
   },{
     id: '105',
     component: SVG105,
-    path: './icon/液相色谱仪-shimadzu/i-Series.svg', 
+    path: './icon/液相色谱仪-shimadzu/i-Series.svg',
     name: 'i-Series',
     type: intl.formatMessage({ id:'Liquid chromatograph-shimadzu'}),
   },{
