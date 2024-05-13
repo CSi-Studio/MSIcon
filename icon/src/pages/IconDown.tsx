@@ -1376,19 +1376,19 @@ const iconList = [
   },{
     id: '165',
     component: SVG165,
-    path: './icon/谱图表达/色谱图/MS2.svg',
+    path: './icon/谱图表达/质谱图/MS2.svg',
     name: 'MS2',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
     id: '166',
     component: SVG166,
-    path: './icon/谱图表达/色谱图/MS3.svg',
+    path: './icon/谱图表达/质谱图/MS3.svg',
     name: 'MS3',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
     id: '167',
     component: SVG167,
-    path: './icon/谱图表达/色谱图/MSn.svg',
+    path: './icon/谱图表达/质谱图/MSn.svg',
     name: 'MSn',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
