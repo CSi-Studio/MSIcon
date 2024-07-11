@@ -1244,20 +1244,20 @@ const iconList = [
   },{
     id: '232',
     component: SVG232,
-    path: './icon/常用实验仪器-其他/COM-移液器盒装吸头',
+    path: './icon/常用实验仪器-其他/COM-移液器盒装吸头.svg',
     name: intl.formatMessage({ id:'Pipette box suction head'}),
     type: intl.formatMessage({ id:'Common experimental instruments-Others'}),
   },{
     id: '234',
     component: SVG234,
-    path: './icon/常用实验仪器-其他/蒸发皿',
+    path: './icon/常用实验仪器-其他/蒸发皿.svg',
     name: intl.formatMessage({ id:'Evaporating dish'}),
     recommend:'#666666',
     type: intl.formatMessage({ id:'Common experimental instruments-Others'}),
   },{
     id: '235',
     component: SVG235,
-    path: './icon/常用实验仪器-其他/进样瓶_1',
+    path: './icon/常用实验仪器-其他/进样瓶_1.svg',
     name: intl.formatMessage({ id: 'AUTOSAMPLER VIALS_1'}),
     association: intl.formatMessage({ id:'AUTOSAMPLER VIALS_2'}),
     recommend:'#999999',
@@ -1265,7 +1265,7 @@ const iconList = [
   },{
     id: '236',
     component: SVG236,
-    path: './icon/常用实验仪器-其他/进样瓶_2',
+    path: './icon/常用实验仪器-其他/进样瓶_2.svg',
     name: intl.formatMessage({ id: 'AUTOSAMPLER VIALS_2'}),
     association: intl.formatMessage({ id:'AUTOSAMPLER VIALS_1'}),
     recommend:'#999999',
@@ -1376,19 +1376,19 @@ const iconList = [
   },{
     id: '165',
     component: SVG165,
-    path: './icon/谱图表达/质谱图/MS2.svg',
+    path: './icon/谱图表达/色谱图/MS2.svg',
     name: 'MS2',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
     id: '166',
     component: SVG166,
-    path: './icon/谱图表达/质谱图/MS3.svg',
+    path: './icon/谱图表达/色谱图/MS3.svg',
     name: 'MS3',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
     id: '167',
     component: SVG167,
-    path: './icon/谱图表达/质谱图/MSn.svg',
+    path: './icon/谱图表达/色谱图/MSn.svg',
     name: 'MSn',
     type: intl.formatMessage({ id: 'Spectral representation-mass spectrometry'}),
   },{
