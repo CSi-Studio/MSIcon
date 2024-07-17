@@ -241,6 +241,8 @@ import { ReactComponent as SVG239} from '../../public/icon/质谱仪-清谱科�
 import { ReactComponent as SVG240} from '../../public/icon/质谱仪-清谱科技/Miniature Ms System-开盖.svg';
 import { ReactComponent as SVG241} from '../../public/icon/质谱仪-清谱科技/Miniature Ms System-进样.svg';
 import { ReactComponent as SVG242} from '../../public/icon/常用实验仪器-其他/进样盒.svg';
+import { ReactComponent as SVG243} from '../../public/icon/常用实验仪器-其他/细胞破碎仪.svg';
+import { ReactComponent as SVG244} from '../../public/icon/常用实验仪器-其他/细胞破碎仪1.svg';
 import { getIntl } from '@umijs/max';
 const intl = getIntl();
 
@@ -1275,6 +1277,18 @@ const iconList = [
     component:SVG242,
     path: './icon/常用实验仪器-其他/进样盒.svg',
     name:intl.formatMessage({ id:'Injection box'}),
+    type: intl.formatMessage({ id:'Common experimental instruments-Others'})
+  },{
+    id:'243',
+    component:SVG243,
+    path: './icon/常用实验仪器-其他/细胞破碎仪.svg',
+    name:intl.formatMessage({ id:'Sonifier'}),
+    type: intl.formatMessage({ id:'Common experimental instruments-Others'})
+  },{
+    id:'244',
+    component:SVG244,
+    path: './icon/常用实验仪器-其他/细胞破碎仪1.svg',
+    name:intl.formatMessage({ id:'Sonifier1'}),
     type: intl.formatMessage({ id:'Common experimental instruments-Others'})
   },{
     id: '152',

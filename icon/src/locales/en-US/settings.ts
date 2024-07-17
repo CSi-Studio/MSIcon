@@ -270,5 +270,7 @@ export default {
   'food':'Food',
   'judicial':'Judicial',
   'Instrument development':'Instrument development',
-  'Choose':'Choose download file size: Custom size'
+  'Choose':'Choose download file size: Custom size',
+  'Sonifier':'Sonifier',
+  'Sonifier1':'Sonifier1',
 };

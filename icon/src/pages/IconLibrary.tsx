@@ -32,7 +32,7 @@ const IconLibrary = () => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgData, 'image/svg+xml');
         const pathsToChangeColor = doc.querySelectorAll('path');
-  
+
       // 设置 SVG 元素的大小
       const svg = doc.querySelector('svg');
       svg.setAttribute('width', `${width}px`);
@@ -211,7 +211,7 @@ const IconLibrary = () => {
  const num = numStr ? JSON.parse(numStr) : [];
   // console.log('num',num);
 
-  
+
   const deleteFromShop = (id: string) => {
     const filter= shop.filter((itemId) => itemId!== id);
     setShop(filter);
@@ -527,7 +527,7 @@ const IconLibrary = () => {
           <li onClick={showDrawer}>
           <Badge count={(num && num.length) || 0}>
           <ShoppingCartOutlined style={{ fontSize: '24px' }} />
-          </Badge>  
+          </Badge>
           </li>
           <li>
           <SelectLang style={{marginTop:'-8px'}}/>
@@ -554,7 +554,7 @@ const IconLibrary = () => {
         <div style={{height:'100%',overflow:'auto',margin:'auto'}}>
           {Object.entries(groupedIcons).map(([type, icons]) => (
             <div >
-              <h2 style={{ marginBottom: '30px' }}>{type}</h2>
+              <h2 style={{ marginBottom: '80px' }}>{type}</h2>
               <div
                 key={type}
                 style={{ display: 'flex', flexWrap: 'wrap', width: '1600px', marginBottom: '35px' }}
@@ -571,6 +571,7 @@ const IconLibrary = () => {
                           whiteSpace: 'normal',
                           marginLeft:'20px',
                           marginTop: '-26px',
+                          marginBottom:'70px'
                         }}
                       >
                         {icon.name}
@@ -655,7 +656,7 @@ const IconLibrary = () => {
           <p><FormattedMessage id={'Quickly'}/></p>
         )}
         <div style={{'position': 'absolute', 'bottom': '320px','left':'40px'}}><FormattedMessage id={'Choose'}/></div>
-        <div style={{fontSize:'16px','position': 'absolute', 'bottom': '280px','left':'40px'}}> <Input placeholder="200" style={{'width':'50px',height:'26px',marginLeft:'5px'}} onChange={onChange3}/><span style={{marginLeft:'5px',marginRight:'5px'}}>x</span>{width}</div>       
+        <div style={{fontSize:'16px','position': 'absolute', 'bottom': '280px','left':'40px'}}> <Input placeholder="200" style={{'width':'50px',height:'26px',marginLeft:'5px'}} onChange={onChange3}/><span style={{marginLeft:'5px',marginRight:'5px'}}>x</span>{width}</div>
         <div className={styles.down} onClick={() => down1()}>
         <FormattedMessage id={'download'}/> png
         </div>

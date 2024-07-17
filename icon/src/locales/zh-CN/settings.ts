@@ -266,4 +266,6 @@ export default {
   'judicial':'司法',
   'Instrument development':'仪器研发',
   'Choose':'选择下载文件大小：自定义大小',
+  'Sonifier':'细胞破碎仪',
+  'Sonifier1':'细胞破碎仪1',
 };

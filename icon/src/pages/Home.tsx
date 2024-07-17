@@ -39,7 +39,7 @@ const Home = () => {
         // 解析 SVG 文件
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgData, 'image/svg+xml');
-  
+
       // 设置 SVG 元素的大小
       const svg = doc.querySelector('svg');
       svg.setAttribute('width', `${width}px`);
@@ -197,11 +197,11 @@ const Home = () => {
           <p>60+</p>
         </li>
       </ul>
-      <div className={styles.tutorial}><FormattedMessage id={'Tutorial on using icon libraries'}/></div> 
+      <div className={styles.tutorial}><FormattedMessage id={'Tutorial on using icon libraries'}/></div>
       <div className={styles.help}><FormattedMessage id={'Help'}/></div>
       <ul className={styles.helpbox}>
         <li>
-          <div><FormattedMessage id={'download'}/></div> 
+          <div><FormattedMessage id={'download'}/></div>
           <div>
             <div className={styles.title}>
               <div className={styles.disc}></div>
@@ -338,7 +338,7 @@ const Home = () => {
           <p><FormattedMessage id={'Quickly'}/></p>
         )}
         <div style={{'position': 'absolute', 'bottom': '320px','left':'40px'}}><FormattedMessage id={'Choose'}/></div>
-        <div style={{fontSize:'16px','position': 'absolute', 'bottom': '280px','left':'40px'}}> <Input placeholder="200" style={{'width':'50px',height:'26px',marginLeft:'5px'}} onChange={onChange3}/><span style={{marginLeft:'5px',marginRight:'5px'}}>x</span>{width}</div>       
+        <div style={{fontSize:'16px','position': 'absolute', 'bottom': '280px','left':'40px'}}> <Input placeholder="200" style={{'width':'50px',height:'26px',marginLeft:'5px'}} onChange={onChange3}/><span style={{marginLeft:'5px',marginRight:'5px'}}>x</span>{width}</div>
         <div className={styles.down} onClick={() => down1()}>
         <FormattedMessage id={'download'}/> png
         </div>
@@ -348,5 +348,6 @@ const Home = () => {
       </Drawer>
     </div>
   );
+
 };
 export default Home;
